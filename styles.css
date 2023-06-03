@@ -1,0 +1,230 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+html{
+  overflow-x: hidden;
+}
+
+/* first section for left and right side */
+
+.container{
+  width: 50%;
+  height: 600px;
+  background-color: ghostwhite;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.281);
+  margin: auto;
+  padding: 10px;
+  border-radius: 20px;
+  display: flex;
+}
+
+.left-side{
+  width: 300px;
+  height: 100%;
+  background-image: url(/images/bg-sidebar-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.info{
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.step-number{
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 10px;
+  color: ghostwhite;
+  font-weight: bold;
+}
+
+.step-one-text{
+  font-size: .9rem;
+  text-transform: uppercase;
+  color: rgba(248, 248, 255, 0.644);
+  font-weight: 100;
+  margin-bottom: 5px;
+}
+
+.step-text{
+  font-size: 1rem;
+  color: ghostwhite;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.spacing{
+  margin-left: 20px;
+}
+
+.right-side{
+  padding-left: 40px;
+  padding-top: 50px;
+  padding-right: 30px;
+}
+
+input{
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.548);
+  border-radius: 5px;
+  margin-bottom: 25px;
+  padding-left: 15px;
+}
+
+.head-text{
+  font-size: 2.5rem;
+  color: rgb(45, 39, 83);
+  margin-bottom: 10px;
+}
+
+.info-text{
+  color: grey;
+  font-size: 1rem;
+}
+
+.input-fields{
+  margin-top: 30px;
+}
+
+.name-text{
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.action-for-step-one-btn{
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  height: 100px;
+}
+
+.step-one-btn{
+  padding: 13px 30px 13px 30px;
+  background-color: rgb(63, 53, 116);
+  color: ghostwhite;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* end of right side first section */
+
+.select-three-boxes{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+}
+
+.plan:hover{
+  box-shadow:0px 0px 5px rgba(66, 37, 134, 0.808); 
+}
+
+.plan{
+  border-radius: 10px;
+  padding: 20px;
+  border: none;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.808);
+  width: 140px;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  cursor: pointer;
+}
+
+.text-above-plans{
+  margin-bottom: 30px;
+}
+
+.plan-text{
+  font-size: 1rem;
+  position: relative;
+  top: 20px;
+}
+
+.plan-cost-text{
+  color: grey;
+}
+
+.monthly-or-yearly{
+  width: 100%;
+  background-color: rgba(71, 61, 139, 0.048);
+  height: 40px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.toggle-outer{
+  background-color: rgb(41, 23, 92);
+  height: 25px;
+  border-radius: 20px;
+  width: 40px;
+  padding: 5px;
+}
+
+.ball-inner{
+  height: 100%;
+  width: 15px;
+  border-radius: 50%;
+  background-color: ghostwhite;
+  cursor: pointer;
+}
+
+.monthly-text, .yearly-text{
+  font-weight: bold;
+  cursor: pointer;
+  color: grey;
+}
+
+.actions-for-step-two-btn{
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.go-back-btn-one{
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background-color: ghostwhite;
+  cursor: pointer;
+  color: rgba(97, 95, 95, 0.733);
+  font-size: 1rem;
+  font-weight: bold;
+  position: relative;
+  bottom: 5px;
+}
+
+.go-back-btn-one:hover{
+  text-decoration: underline;
+}
