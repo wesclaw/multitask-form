@@ -250,6 +250,7 @@ input{
 .wrapper-for-add-on{
   margin-bottom: 20px;
   padding: 20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.212);
   display: flex;
   height: 70px;
   align-items: center;
