@@ -296,3 +296,42 @@ input{
   align-items: end;
   width: 80%;
 }
+
+.arcade-monthly-main{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(108, 107, 124, 0.062);
+  width: 85%;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.068);
+}
+
+.change-btn{
+  background-color: none;
+  text-decoration: underline;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: rgba(24, 24, 75, 0.767);
+  cursor: pointer;
+}
+
+.text-above-plans{
+  width: 85%;
+}
+
+.arcade-price{
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: rgba(11, 11, 83, 0.712);
+}
+
+.arcade-text{
+  color: rgb(35, 35, 104);
+}
+
+/*YEARLY AND MONTHLY FOR DISPLAY NONE */
+ 
+
+/*  */

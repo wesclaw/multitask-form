@@ -2,6 +2,9 @@
   .container{
     width: 60%;
   }
+  .arcade-monthly-main{
+    width: 90%;
+  }
 }
 
 @media(max-width: 1400px){
@@ -14,6 +17,10 @@
   }
   .right-side{
     padding-left: 20px;
+  }
+  
+  .arcade-monthly-main{
+    width: 90%;
   }
 }
 
@@ -126,5 +133,9 @@
     flex-direction: column-reverse;
     width: 100%;
     gap: 20px;
+  }
+  
+  .arcade-monthly-main{
+    width: 100%;
   }
 }
