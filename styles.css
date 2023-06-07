@@ -20,7 +20,6 @@ html{
 /* first section for left and right side */
 
 .container{
-  /* change to fit right side better. carefult for overflapping objects. was 50% but try 40%*/
   width: 50%;
   height: 600px;
   background-color: ghostwhite;
@@ -33,7 +32,6 @@ html{
 
 .left-side{
   width: 450px;
-  /* width: 50%; */
   height: 100%;
   background-image: url(/images/bg-sidebar-desktop.svg);
   background-repeat: no-repeat;
