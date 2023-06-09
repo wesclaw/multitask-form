@@ -311,7 +311,7 @@ input{
   outline: none;
   border: none;
   font-size: 1rem;
-  color: rgba(24, 24, 75, 0.767);
+  color: rgba(24, 24, 75, 0.63);
   cursor: pointer;
 }
 
@@ -320,7 +320,7 @@ input{
 }
 
 .arcade-price{
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: rgba(11, 11, 83, 0.712);
 }
@@ -329,7 +329,35 @@ input{
   color: rgb(35, 35, 104);
 }
 
+.price-for-monthly-add-on{
+  font-size: 1rem;
+  color: rgb(82, 80, 80);
+}
+
+.add-on-price-tag{
+  border-bottom: unset;
+}
+
 /*YEARLY AND MONTHLY FOR DISPLAY NONE */
  
+  .pro-main-yearly{
+    display: none;
+  }
+
+  .advanced-main-yearly{
+    display: none;
+  }
+
+  .arcade-main-yearly{
+    display: none;
+  }
+
+  .pro-main-monthly{
+    display: none;
+  }
+
+  .advanced-main-monthly{
+    display: none;
+  }
 
 /*  */
