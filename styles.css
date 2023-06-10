@@ -301,7 +301,7 @@ input{
   background-color: rgba(108, 107, 124, 0.062);
   width: 85%;
   align-items: center;
-  padding: 20px;
+  padding: 15px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.068);
 }
 
@@ -338,6 +338,23 @@ input{
   border-bottom: unset;
 }
 
+.final-price-monthly{
+  background-color: ghostwhite;
+  border: none;
+}
+
+.final-price-monthly-text{
+  font-size: 1.3rem;
+  color: rgb(125, 43, 158);
+  font-weight: 800;
+}
+
+.actions-for-step-four-btn{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
 /*YEARLY AND MONTHLY FOR DISPLAY NONE */
  
   .pro-main-yearly{
@@ -359,5 +376,14 @@ input{
   .advanced-main-monthly{
     display: none;
   }
+
+/*  */
+
+/*  */
+.final-price-yearly{
+  background-color: ghostwhite;
+  border: none;
+  display: none;
+}
 
 /*  */
