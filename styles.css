@@ -352,7 +352,43 @@ input{
 .actions-for-step-four-btn{
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 85%;
+  margin-top: 50px;
+}
+
+.total-text-month{
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.confirm_btn{
+  font-weight: 800;
+}
+
+.right-side-thank-you{
+  width: 100%;
+}
+
+.thank-you-section{
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.thank-you-section img{
+  margin-bottom: 20px;
+}
+
+.thank-you-section h1{
+  margin-bottom: 20px;
+}
+
+.thank-you-section p{
+  max-width: 80%;
+  line-height: 1.5em;
 }
 
 /*YEARLY AND MONTHLY FOR DISPLAY NONE */
