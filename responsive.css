@@ -11,6 +11,10 @@
     width: 90%;
     margin-top: 50px;
   }
+
+  .right-side-step-one{
+    margin-left: 30px;
+  }
   
 }
 
@@ -29,6 +33,7 @@
   .arcade-monthly-main{
     width: 90%;
   }
+
 }
 
 @media(max-width: 1050px){
@@ -163,4 +168,29 @@
     margin-top: 20px;
     margin-bottom: 20px;
   }
+  .right-side-step-three{
+    width: unset;
+    margin-left: unset;
+  }
+  .select-three-boxes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+  .monthly-or-yearly{
+    width: 100%;
+  }
+  .right-side-step-two{
+    margin-left: unset;
+  }
+  .right-side-step-one{
+    margin-left: unset;
+  }
+
+  .name-text{
+    text-align: start;
+  }
+
 }

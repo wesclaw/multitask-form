@@ -99,6 +99,10 @@ input{
   margin-bottom: 10px;
 }
 
+.right-side-step-three{
+  margin-left: 30px;
+}
+
 .info-text{
   color: grey;
   font-size: 1rem;
@@ -119,9 +123,9 @@ input{
   display: flex;
   justify-content: end;
   align-items: end;
-  height: 100px;
+  height: 60px;
   /* added 80 here because btns were off to the right */
-  width: 80%;
+  width: 90%;
 }
 
 .step-one-btn{
@@ -135,6 +139,10 @@ input{
   cursor: pointer;
 }
 
+.right-side-step-two{
+  margin-left: 20px;
+}
+
 /* end of right side first section */
 
 .select-three-boxes{
@@ -142,6 +150,7 @@ input{
   justify-content: center;
   align-items: center;
   gap: 20px;
+  width: 90%;
 }
 
 .plan:hover{
@@ -177,7 +186,7 @@ input{
 }
 
 .monthly-or-yearly{
-  width: 100%;
+  width: 90%;
   background-color: rgba(71, 61, 139, 0.048);
   height: 40px;
   margin-top: 40px;
@@ -252,7 +261,7 @@ input{
   display: flex;
   height: 70px;
   align-items: center;
-  width: 80%;
+  width: 90%;
   justify-content: space-around;
   align-items: center;
   border-radius: 5px;
@@ -352,7 +361,7 @@ input{
 .actions-for-step-four-btn{
   display: flex;
   justify-content: space-between;
-  width: 85%;
+  width: 90%;
   margin-top: 50px;
 }
 
@@ -413,13 +422,69 @@ input{
     display: none;
   }
 
-/*  */
+  .final-price-yearly{
+    background-color: ghostwhite;
+    border: none;
+    display: none;
+  }
 
-/*  */
-.final-price-yearly{
-  background-color: ghostwhite;
-  border: none;
+  .right-side-thank-you{
+    display: none;
+  }
+
+  .final-price-monthly{
+    display: none;
+  }
+
+  .custom-profile-price-monthly{
+    display: none;
+  }
+
+  .larger-storage-price-monthly {
+    display: none;
+  }
+
+  .online-service-price-monthly{
+    display: none;
+  }
+
+  .arcade-monthly-main{
+    display: none;
+  }
+
+  .right-side-step-four{
+    display: none;
+  }
+
+  .add-on-yearly-customizable-profile{
+    display: none;
+  }
+
+  .add-on-yearly-larger-storage{
+    display: none;
+  }
+
+  .add-on-yearly-online-service{
+    display: none;
+  }
+
+ .Customizable-profile{
   display: none;
-}
+ }
 
+ .larger-storage{
+  display: none;
+ }
+
+ .online-service{
+  display: none;
+ }
+
+ .right-side-step-three{
+  display: none;
+ }
+
+ .right-side-step-two{
+  display: none;
+ }
 /*  */
