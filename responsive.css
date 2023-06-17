@@ -87,6 +87,19 @@
   .action-for-step-one-btn{
     height: unset;
     justify-content: center;
+    width: 100%;
+  }
+
+  .step-one-btn{
+    padding: 20px 30px 20px 30px;
+    background-color: rgb(63, 53, 116);
+    color: ghostwhite;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
   }
   /*  */
   .select-three-boxes{
@@ -188,9 +201,8 @@
   .right-side-step-one{
     margin-left: unset;
   }
-
   .name-text{
     text-align: start;
   }
-
+  
 }

@@ -17,7 +17,103 @@ html{
   overflow-x: hidden;
 }
 
+/*YEARLY AND MONTHLY FOR DISPLAY NONE */
+ 
+.pro-main-yearly{
+  display: none;
+}
+
+.advanced-main-yearly{
+  display: none;
+}
+
+.arcade-main-yearly{
+  display: none;
+}
+
+.pro-main-monthly{
+  display: none;
+}
+
+.advanced-main-monthly{
+  display: none;
+}
+
+.final-price-yearly{
+  background-color: ghostwhite;
+  border: none;
+  display: none;
+}
+
+.right-side-thank-you{
+  display: none;
+}
+
+.final-price-monthly{
+  display: none;
+}
+
+.custom-profile-price-monthly{
+  display: none;
+}
+
+.larger-storage-price-monthly {
+  display: none;
+}
+
+.online-service-price-monthly{
+  display: none;
+}
+
+.arcade-monthly-main{
+  display: none;
+}
+
+.right-side-step-four{
+  display: none;
+}
+
+.add-on-yearly-customizable-profile{
+  display: none;
+}
+
+.add-on-yearly-larger-storage{
+  display: none;
+}
+
+.add-on-yearly-online-service{
+  display: none;
+}
+
+
+
+.customizable-profile{
+  display: none;
+}
+
+.larger-storage{
+display: none;
+}
+
+.online-service{
+display: none;
+}
+
+.right-side-step-three{
+display: none;
+}
+
+.right-side-step-two{
+display: none;
+}
+
 /* first section for left and right side */
+
+.ball-move{
+  position: relative;
+  transform: translateX(15px);
+  transition: .2s;
+}
 
 .container{
   width: 50%;
@@ -129,14 +225,16 @@ input{
 }
 
 .step-one-btn{
-  padding: 13px 30px 13px 30px;
+  padding: 15px 30px 15px 30px;
   background-color: rgb(63, 53, 116);
   color: ghostwhite;
   font-weight: bold;
   border-radius: 10px;
+  font-size: 1rem;
   border: none;
   outline: none;
   cursor: pointer;
+  width: unset;
 }
 
 .right-side-step-two{
@@ -204,12 +302,21 @@ input{
   padding: 5px;
 }
 
+.red-plan-text{
+  color: rgba(255, 0, 0, 0.596);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  position: relative;
+  top: 20px;
+  display: none;
+}
+
 .ball-inner{
   height: 100%;
   width: 15px;
   border-radius: 50%;
   background-color: ghostwhite;
-  cursor: pointer;
+  transition: .2s ease;
 }
 
 .monthly-text, .yearly-text{
@@ -220,6 +327,7 @@ input{
 
 .actions-for-step-two-btn{
   margin-top: 100px;
+  height: 75px;
   display: flex;
   justify-content: space-between;
   align-items: end;
@@ -400,91 +508,5 @@ input{
   line-height: 1.5em;
 }
 
-/*YEARLY AND MONTHLY FOR DISPLAY NONE */
- 
-  .pro-main-yearly{
-    display: none;
-  }
 
-  .advanced-main-yearly{
-    display: none;
-  }
-
-  .arcade-main-yearly{
-    display: none;
-  }
-
-  .pro-main-monthly{
-    display: none;
-  }
-
-  .advanced-main-monthly{
-    display: none;
-  }
-
-  .final-price-yearly{
-    background-color: ghostwhite;
-    border: none;
-    display: none;
-  }
-
-  .right-side-thank-you{
-    display: none;
-  }
-
-  .final-price-monthly{
-    display: none;
-  }
-
-  .custom-profile-price-monthly{
-    display: none;
-  }
-
-  .larger-storage-price-monthly {
-    display: none;
-  }
-
-  .online-service-price-monthly{
-    display: none;
-  }
-
-  .arcade-monthly-main{
-    display: none;
-  }
-
-  .right-side-step-four{
-    display: none;
-  }
-
-  .add-on-yearly-customizable-profile{
-    display: none;
-  }
-
-  .add-on-yearly-larger-storage{
-    display: none;
-  }
-
-  .add-on-yearly-online-service{
-    display: none;
-  }
-
- .Customizable-profile{
-  display: none;
- }
-
- .larger-storage{
-  display: none;
- }
-
- .online-service{
-  display: none;
- }
-
- .right-side-step-three{
-  display: none;
- }
-
- .right-side-step-two{
-  display: none;
- }
 /*  */
