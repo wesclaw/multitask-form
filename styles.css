@@ -85,9 +85,7 @@ html{
   display: none;
 }
 
-
-
-.customizable-profile{
+/* .customizable-profile{
   display: none;
 }
 
@@ -97,7 +95,7 @@ display: none;
 
 .online-service{
 display: none;
-}
+} */
 
 .right-side-step-three{
 display: none;
@@ -508,5 +506,14 @@ input{
   line-height: 1.5em;
 }
 
+.larger-yearly-text{
+  position: relative;
+  left: -12px;
+}
+
+.move-right-text{
+  position: relative;
+  left: 4px;
+}
 
 /*  */

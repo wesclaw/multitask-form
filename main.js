@@ -8,6 +8,7 @@ function submitForm(e){
   const right_side_step_two = document.querySelector('.right-side-step-two')
   const step_num_one = document.querySelector('.step-num-one')
   const step_num_two = document.querySelector(".step-num-two")
+  
 
   const step_two_btn = document.querySelector('.step-two-btn')
   const right_side_step_three = document.querySelector('.right-side-step-three')
@@ -22,6 +23,13 @@ function submitForm(e){
     right_side_step_two.style.display = 'none'
     step_num_one.style.backgroundColor = 'transparent'
     step_num_one.style.color = 'white'
+  })
+
+  back_btn_two.addEventListener('click',()=>{
+    right_side_step_three.style.display = 'none'
+    right_side_step_two.style.display = 'block'
+    step_num_two.style.backgroundColor = 'transparent'
+    step_num_two.style.color = 'white'
   })
 
   step_two_btn.addEventListener('click',()=>{
@@ -43,6 +51,7 @@ function submitForm(e){
 form.addEventListener('submit', submitForm)
 
 const back_btn_one = document.querySelector('.go-back-btn-one')
+const back_btn_two = document.querySelector('.go-back-btn-two')
 
 let hasBorder = false
 
@@ -67,14 +76,38 @@ monthly_and_yearly_ball.forEach((text)=>{
     const ball = document.querySelector('.ball-inner')
     let plan_cost_text = document.querySelectorAll('.plan-cost-text')
 
+    const add_on_yearly_customizable_profile = document.querySelector('.add-on-yearly-customizable-profile')
+    const add_on_yearly_larger_storage = document.querySelector('.add-on-yearly-larger-storage')
+    const add_on_yearly_online_service = document.querySelector('.add-on-yearly-online-service')
+
+    const online_service = document.querySelector('.online-service')
+    const larger_storage = document.querySelector('.larger-storage')
+    const customizable_profile = document.querySelector('.customizable-profile')
+
     if(moveBall==='Yearly'){
       ball.classList.add('ball-move') 
+      online_service.style.display = 'none'
+      larger_storage.style.display = 'none'
+      customizable_profile.style.display = 'none'
+
+      add_on_yearly_online_service.style.display = 'block'
+      add_on_yearly_larger_storage.style.display = 'block'
+      add_on_yearly_customizable_profile.style.display = 'block'
       
       for(let i=0;i<plan_cost_text.length; i++){
         plan_cost_text[i].textContent = yearlyPlanTextPrices[i]
       }
     }else {
       ball.classList.remove('ball-move')
+
+      add_on_yearly_online_service.style.display = 'none'
+      add_on_yearly_larger_storage.style.display = 'none'
+      add_on_yearly_customizable_profile.style.display = 'none'
+
+      online_service.style.display = 'block'
+      larger_storage.style.display = 'block'
+      customizable_profile.style.display = 'block'
+
     
       for(let i=0;i<plan_cost_text.length; i++){
         plan_cost_text[i].textContent = monthlyPlanTextPrices[i]
