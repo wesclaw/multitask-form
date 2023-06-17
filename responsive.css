@@ -170,7 +170,7 @@
     width: 100%;
     flex-direction: column-reverse;
     row-gap: 20px;
-    margin-top: 0px;
+    margin-top: 80px;
   }
   .go-back-btn-one{
     background-color: ghostwhite;

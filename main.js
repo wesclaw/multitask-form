@@ -8,10 +8,11 @@ function submitForm(e){
   const right_side_step_two = document.querySelector('.right-side-step-two')
   const step_num_one = document.querySelector('.step-num-one')
   const step_num_two = document.querySelector(".step-num-two")
-  
+  const step_num_three = document.querySelector('.step-num-three')
 
   const step_two_btn = document.querySelector('.step-two-btn')
   const right_side_step_three = document.querySelector('.right-side-step-three')
+  const right_side_step_four = document.querySelector('.right-side-step-four')
 
   right_side_step_one.style.display = 'none'
   right_side_step_two.style.display = 'block'
@@ -46,6 +47,16 @@ function submitForm(e){
     step_num_two.style.backgroundColor = 'white'
     step_num_two.style.color = 'black'
   })
+
+  const last_step_btn = document.querySelector('.last-step-btn')
+
+  last_step_btn.addEventListener('click',()=>{
+    right_side_step_three.style.display = 'none'
+    right_side_step_four.style.display = 'block'
+    step_num_three.style.backgroundColor = 'white'
+    step_num_three.style.color = 'black'
+  })
+
 }
 
 form.addEventListener('submit', submitForm)
@@ -108,14 +119,10 @@ monthly_and_yearly_ball.forEach((text)=>{
       larger_storage.style.display = 'block'
       customizable_profile.style.display = 'block'
 
-    
       for(let i=0;i<plan_cost_text.length; i++){
         plan_cost_text[i].textContent = monthlyPlanTextPrices[i]
       }    
     } 
   })
 })
-
-
-
 

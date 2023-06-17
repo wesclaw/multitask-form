@@ -468,6 +468,7 @@ input{
   display: flex;
   justify-content: space-between;
   width: 90%;
+  height: 75px;
   margin-top: 50px;
 }
 
@@ -514,6 +515,11 @@ input{
 .move-right-text{
   position: relative;
   left: 4px;
+}
+
+.move-input-left{
+  position: relative;
+  left: -5px;
 }
 
 /*  */
