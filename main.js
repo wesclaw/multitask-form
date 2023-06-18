@@ -95,6 +95,9 @@ plans.forEach((plan)=>{
       advanced_monthly.style.display = 'none'
       arcade_monthly.style.display = 'none'
     }
+    // 
+  
+    // 
     plans.forEach((p)=>{
       p.style.border =  '0px solid rgba(128, 0, 128, 0.466)'
     })
@@ -127,7 +130,7 @@ monthly_and_yearly_ball.forEach((text)=>{
     const customizable_profile = document.querySelector('.customizable-profile')
 
     if(moveBall==='Yearly'){
-      ball.classList.add('ball-move') 
+      ball.classList.add('ball-move')  
       online_service.style.display = 'none'
       larger_storage.style.display = 'none'
       customizable_profile.style.display = 'none'
@@ -136,18 +139,9 @@ monthly_and_yearly_ball.forEach((text)=>{
       add_on_yearly_larger_storage.style.display = 'block'
       add_on_yearly_customizable_profile.style.display = 'block'
 
-      // 
-
-      
-
-
-      // 
-
       for(let i=0;i<plan_cost_text.length; i++){
         plan_cost_text[i].textContent = yearlyPlanTextPrices[i]
       }
-
-      
 
       // plans.forEach((plan)=>{
       //   plan.addEventListener('click',(e)=>{
@@ -170,8 +164,6 @@ monthly_and_yearly_ball.forEach((text)=>{
       //     }
       //   })
       // })
-
-
 
     } else {
       ball.classList.remove('ball-move')
