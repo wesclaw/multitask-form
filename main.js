@@ -75,8 +75,26 @@ const back_btn_two = document.querySelector('.go-back-btn-two')
 
 let hasBorder = false
 
+const arcade_monthly = document.querySelector('.arcade-monthly')
+const advanced_monthly = document.querySelector('.advanced-main-monthly')
+const pro_monthly = document.querySelector('.pro-main-monthly')
+
 plans.forEach((plan)=>{
-  plan.addEventListener('click',()=>{
+  plan.addEventListener('click',(e)=>{
+    const pick = e.currentTarget.classList;
+    if(pick.contains('arcade')){
+      arcade_monthly.style.display = 'flex'
+      advanced_monthly.style.display = 'none'
+      pro_monthly.style.display = 'none'
+    }else if(pick.contains('advanced')){
+      advanced_monthly.style.display = 'flex'
+      arcade_monthly.style.display = 'none'
+      pro_monthly.style.display = 'none'
+    }else if(pick.contains('pro')){
+      pro_monthly.style.display = 'flex'
+      advanced_monthly.style.display = 'none'
+      arcade_monthly.style.display = 'none'
+    }
     plans.forEach((p)=>{
       p.style.border =  '0px solid rgba(128, 0, 128, 0.466)'
     })
@@ -89,6 +107,10 @@ const monthly_and_yearly_ball = document.querySelectorAll('.monthly-and-yearly-b
 
 const yearlyPlanTextPrices = ['$108/yr', '$144/yr', '$180/yr']
 const monthlyPlanTextPrices = ['$9/mo', '$12/mo', '$15/mo']
+
+const arcade_main_yearly = document.querySelector('.arcade-main-yearly')
+const advanced_main_yearly = document.querySelector('.advanced-main-yearly')
+const pro_main_yearly = document.querySelector('.pro-main-yearly')
 
 monthly_and_yearly_ball.forEach((text)=>{
   text.addEventListener('click',(e)=>{
@@ -113,11 +135,45 @@ monthly_and_yearly_ball.forEach((text)=>{
       add_on_yearly_online_service.style.display = 'block'
       add_on_yearly_larger_storage.style.display = 'block'
       add_on_yearly_customizable_profile.style.display = 'block'
+
+      // 
+
       
+
+
+      // 
+
       for(let i=0;i<plan_cost_text.length; i++){
         plan_cost_text[i].textContent = yearlyPlanTextPrices[i]
       }
-    }else {
+
+      
+
+      // plans.forEach((plan)=>{
+      //   plan.addEventListener('click',(e)=>{
+      //     const pick = e.currentTarget.classList;
+      //     if(pick.contains('arcade')){
+      //       arcade_main_yearly.style.display = 'flex'
+      //       advanced_main_yearly.style.display = 'none'
+      //       pro_main_yearly.style.display = 'none'
+      //       arcade_monthly.style.display = 'none'
+      //     }else if(pick.contains('advanced')){
+      //       advanced_main_yearly.style.display = 'flex'
+      //       arcade_main_yearly.style.display = 'none'
+      //       pro_main_yearly.style.display = 'none'
+      //       advanced_monthly.style.display = 'none'
+      //     }else if(pick.contains('pro')){
+      //       pro_main_yearly.style.display = 'flex'
+      //       arcade_main_yearly.style.display = 'none'
+      //       advanced_main_yearly.style.display = 'none'
+      //       pro_monthly.style.display = 'none'
+      //     }
+      //   })
+      // })
+
+
+
+    } else {
       ball.classList.remove('ball-move')
 
       add_on_yearly_online_service.style.display = 'none'
@@ -130,7 +186,29 @@ monthly_and_yearly_ball.forEach((text)=>{
 
       for(let i=0;i<plan_cost_text.length; i++){
         plan_cost_text[i].textContent = monthlyPlanTextPrices[i]
-      }    
+      }  
+
+      // plans.forEach((plan)=>{
+      //   plan.addEventListener('click',(e)=>{
+      //     const pick = e.currentTarget.classList;
+      //     if(pick.contains('arcade')){
+      //       arcade_main_yearly.style.display = 'none'
+      //       advanced_main_yearly.style.display = 'none'
+      //       pro_main_yearly.style.display = 'none'
+      //       arcade_monthly.style.display = 'flex'
+      //     }else if(pick.contains('advanced')){
+      //       advanced_main_yearly.style.display = 'none'
+      //       arcade_main_yearly.style.display = 'none'
+      //       pro_main_yearly.style.display = 'none'
+      //       advanced_monthly.style.display = 'flex'
+      //     }else if(pick.contains('pro')){
+      //       pro_main_yearly.style.display = 'none'
+      //       arcade_main_yearly.style.display = 'none'
+      //       advanced_main_yearly.style.display = 'none'
+      //       pro_monthly.style.display = 'flex'
+      //     }
+      //   })
+      // })
     } 
   })
 })

@@ -414,7 +414,7 @@ input{
   display: flex;
   justify-content: space-between;
   background-color: rgba(108, 107, 124, 0.062);
-  width: 85%;
+  width: 90%;
   align-items: center;
   padding: 15px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.068);
