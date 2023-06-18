@@ -472,13 +472,20 @@ input{
   margin-top: 50px;
 }
 
+.actions-for-step-five-btn{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-top: 50px;
+}
+
 .total-text-month{
   font-size: 1.3rem;
   font-weight: 800;
 }
 
-.confirm_btn{
-  font-weight: 800;
+.confirm-btn{
+  font-size: 1rem;
 }
 
 .right-side-thank-you{
@@ -523,3 +530,47 @@ input{
 }
 
 /*  */
+
+.final-price-yearly{
+  display: none;
+}
+
+.final-price-monthly{
+  display: none;
+}
+
+.custom-profile-price-monthly {
+  display: none;
+}
+
+.larger-storage-price-monthly{
+  display: none;
+}
+
+.online-service-price-monthly{
+  display: none;
+}
+
+.pro-main-yearly{
+  display: none;
+}
+
+.advanced-main-yearly{
+  display: none;
+}
+
+.arcade-main-yearly{
+  display: none;
+}
+
+.pro-main-monthly{
+  display: none;
+}
+
+.advanced-main-monthly{
+  display: none;
+}
+
+.arcade-monthly{
+  display: none;
+}

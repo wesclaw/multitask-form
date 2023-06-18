@@ -57,6 +57,15 @@ function submitForm(e){
     step_num_three.style.color = 'black'
   })
 
+  const last_go_back_btn = document.querySelector('.last-go-back-btn')
+
+  last_go_back_btn.addEventListener('click',()=>{
+    right_side_step_four.style.display = 'none'
+    right_side_step_three.style.display = 'block'
+    step_num_three.style.backgroundColor = 'transparent'
+    step_num_three.style.color = 'white'
+  })
+
 }
 
 form.addEventListener('submit', submitForm)
