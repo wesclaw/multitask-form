@@ -2,10 +2,6 @@ const form = document.querySelector('form')
 
 const plans = document.querySelectorAll('.plan')
 
-function changeToYearElements(){
-  
-}
-
 function submitForm(e){
   e.preventDefault()
   const right_side_step_one = document.querySelector('.right-side-step-one')
@@ -140,13 +136,6 @@ monthly_and_yearly_ball.forEach((text)=>{
       add_on_yearly_larger_storage.style.display = 'block'
       add_on_yearly_customizable_profile.style.display = 'block'
 
-      // 
-    
-      // display all monthly main elements to none? arcade-monthly-main
-     
-      
-      // 
-
       for(let i=0;i<plan_cost_text.length; i++){
         plan_cost_text[i].textContent = yearlyPlanTextPrices[i]
       }
@@ -172,7 +161,6 @@ monthly_and_yearly_ball.forEach((text)=>{
           }
         })
       })
-
     } else {
       ball.classList.remove('ball-move')
       add_on_yearly_online_service.style.display = 'none'
