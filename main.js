@@ -85,6 +85,7 @@ plans.forEach((plan)=>{
       arcade_monthly.style.display = 'flex'
       advanced_monthly.style.display = 'none'
       pro_monthly.style.display = 'none'
+      // add the arcade price function here. make a function for each of these and just use the checkbox.checked again but add the array prices only. no need for display none or flex. there a a function made for each of these? the function only contains the prices if certain checkboxes are clicked
     }else if(pick.contains('advanced')){
       advanced_monthly.style.display = 'flex'
       arcade_monthly.style.display = 'none'
@@ -101,7 +102,6 @@ plans.forEach((plan)=>{
     hasBorder = true
   })
 })
-
 
 const monthly_and_yearly_ball = document.querySelectorAll('.monthly-and-yearly-ball')
 
@@ -207,15 +207,9 @@ const larger_storage_price_monthly = document.querySelector('.larger-storage-pri
 const custom_profile_price_monthly = document.querySelector('.custom-profile-price-monthly')
 const final_price_monthly = document.querySelector('.final-price-monthly')
 
-const checkboxes = document.querySelectorAll('.checkbox')
+const checkbox_monthly = document.querySelectorAll('.checkbox-monthly')
 
-checkboxes.forEach((checkbox)=>{
-  checkbox.addEventListener('click', monthlyAddOns)
-})
-
-// so change above to query select the monthly classes only and then add that function to it. change the html too. change html classname for the monthly to checkbox1 checkbox1 checkbox1
-// i might need to make the monthly checkboxes all 'checkboxMonthly' on name for the monthly and year select all and make diff name for yearly checkboxes then add the function
-
+checkbox_monthly.forEach((checkMonthly)=>checkMonthly.addEventListener('click', monthlyAddOns))
 
 function monthlyAddOns(){
   const checkbox1 = document.getElementById('checkbox1')
@@ -226,19 +220,33 @@ function monthlyAddOns(){
     larger_storage_price_monthly.style.display = 'none'
     custom_profile_price_monthly.style.display = 'none'
   }else if(checkbox1.checked && checkbox2.checked && !checkbox3.checked){
-
+    online_service_price_monthly.style.display = 'flex'
+    larger_storage_price_monthly.style.display = 'flex'
+    custom_profile_price_monthly.style.display = 'none'
   }else if(checkbox1.checked && checkbox2.checked && checkbox3.checked){
-
+    online_service_price_monthly.style.display = 'flex'
+    larger_storage_price_monthly.style.display = 'flex'
+    custom_profile_price_monthly.style.display = 'flex'
   }else if(!checkbox1.checked && !checkbox2.checked && !checkbox3.checked){
-
+    online_service_price_monthly.style.display = 'none'
+    larger_storage_price_monthly.style.display = 'none'
+    custom_profile_price_monthly.style.display = 'none'
   }else if(!checkbox1.checked && !checkbox2.checked && checkbox3.checked){
-
+    online_service_price_monthly.style.display = 'none'
+    larger_storage_price_monthly.style.display = 'none'
+    custom_profile_price_monthly.style.display = 'flex'
   }else if(!checkbox1.checked && checkbox2.checked && checkbox3.checked){
-
+    online_service_price_monthly.style.display = 'none'
+    larger_storage_price_monthly.style.display = 'flex'
+    custom_profile_price_monthly.style.display = 'flex'
   }else if(!checkbox1.checked && checkbox2.checked && !checkbox3.checked){
-
+    online_service_price_monthly.style.display = 'none'
+    larger_storage_price_monthly.style.display = 'flex'
+    custom_profile_price_monthly.style.display = 'none'
   }else if(checkbox1.checked && !checkbox2.checked && checkbox3.checked){
-
+    online_service_price_monthly.style.display = 'flex'
+    larger_storage_price_monthly.style.display = 'none'
+    custom_profile_price_monthly.style.display = 'flex'
   }
 }
 
