@@ -33,13 +33,13 @@ function submitForm(e){
     step_num_two.style.color = 'white'
   })
 
-  step_two_btn.addEventListener('click',()=>{
+  step_two_btn.addEventListener('click',(e)=>{
     const red_plan_text = document.querySelector('.red-plan-text')
     plans.forEach((plan)=>{  
       if(!hasBorder){
         red_plan_text.style.display = 'block'
         return step_two_btn.removeEventListener('click')
-      }
+      } 
     })
     red_plan_text.style.display = 'none'
     right_side_step_two.style.display = 'none'
@@ -65,7 +65,6 @@ function submitForm(e){
     step_num_three.style.backgroundColor = 'transparent'
     step_num_three.style.color = 'white'
   })
-
 }
 
 form.addEventListener('submit', submitForm)
@@ -94,7 +93,7 @@ plans.forEach((plan)=>{
       pro_monthly.style.display = 'flex'
       advanced_monthly.style.display = 'none'
       arcade_monthly.style.display = 'none'
-    }
+    } 
     plans.forEach((p)=>{
       p.style.border =  '0px solid rgba(128, 0, 128, 0.466)'
     })
@@ -102,6 +101,7 @@ plans.forEach((plan)=>{
     hasBorder = true
   })
 })
+
 
 const monthly_and_yearly_ball = document.querySelectorAll('.monthly-and-yearly-ball')
 
@@ -138,8 +138,7 @@ monthly_and_yearly_ball.forEach((text)=>{
 
       for(let i=0;i<plan_cost_text.length; i++){
         plan_cost_text[i].textContent = yearlyPlanTextPrices[i]
-      }
-
+      } 
       plans.forEach((plan)=>{
         plan.addEventListener('click',(e)=>{
           const pick = e.currentTarget.classList;
@@ -200,3 +199,49 @@ monthly_and_yearly_ball.forEach((text)=>{
   })
 })
 
+const monthlyFinalPrices = []
+const yearlyFinalPrices = []
+
+const online_service_price_monthly = document.querySelector('.online-service-price-monthly')
+const larger_storage_price_monthly = document.querySelector('.larger-storage-price-monthly')
+const custom_profile_price_monthly = document.querySelector('.custom-profile-price-monthly')
+const final_price_monthly = document.querySelector('.final-price-monthly')
+
+const checkboxes = document.querySelectorAll('.checkbox')
+
+checkboxes.forEach((checkbox)=>{
+  checkbox.addEventListener('click', monthlyAddOns)
+})
+
+// so change above to query select the monthly classes only and then add that function to it. change the html too. change html classname for the monthly to checkbox1 checkbox1 checkbox1
+// i might need to make the monthly checkboxes all 'checkboxMonthly' on name for the monthly and year select all and make diff name for yearly checkboxes then add the function
+
+
+function monthlyAddOns(){
+  const checkbox1 = document.getElementById('checkbox1')
+  const checkbox2 = document.getElementById('checkbox2')
+  const checkbox3 = document.getElementById('checkbox3')
+  if(checkbox1.checked && !checkbox2.checked && !checkbox3.checked){
+    online_service_price_monthly.style.display = 'flex'
+    larger_storage_price_monthly.style.display = 'none'
+    custom_profile_price_monthly.style.display = 'none'
+  }else if(checkbox1.checked && checkbox2.checked && !checkbox3.checked){
+
+  }else if(checkbox1.checked && checkbox2.checked && checkbox3.checked){
+
+  }else if(!checkbox1.checked && !checkbox2.checked && !checkbox3.checked){
+
+  }else if(!checkbox1.checked && !checkbox2.checked && checkbox3.checked){
+
+  }else if(!checkbox1.checked && checkbox2.checked && checkbox3.checked){
+
+  }else if(!checkbox1.checked && checkbox2.checked && !checkbox3.checked){
+
+  }else if(checkbox1.checked && !checkbox2.checked && checkbox3.checked){
+
+  }
+}
+
+function yearlyAddOns(){
+
+}
