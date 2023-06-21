@@ -1,262 +1,310 @@
-const form = document.querySelector('form')
+// const form = document.querySelector('form')
 
-const plans = document.querySelectorAll('.plan')
+// const plans = document.querySelectorAll('.plan')
 
-function submitForm(e){
-  e.preventDefault()
-  const right_side_step_one = document.querySelector('.right-side-step-one')
-  const right_side_step_two = document.querySelector('.right-side-step-two')
-  const step_num_one = document.querySelector('.step-num-one')
-  const step_num_two = document.querySelector(".step-num-two")
-  const step_num_three = document.querySelector('.step-num-three')
+// let selectedPlan = "";
 
-  const step_two_btn = document.querySelector('.step-two-btn')
-  const right_side_step_three = document.querySelector('.right-side-step-three')
-  const right_side_step_four = document.querySelector('.right-side-step-four')
+// function submitForm(e){
+//   e.preventDefault()
+//   const right_side_step_one = document.querySelector('.right-side-step-one')
+//   const right_side_step_two = document.querySelector('.right-side-step-two')
+//   const step_num_one = document.querySelector('.step-num-one')
+//   const step_num_two = document.querySelector(".step-num-two")
+//   const step_num_three = document.querySelector('.step-num-three')
 
-  right_side_step_one.style.display = 'none'
-  right_side_step_two.style.display = 'block'
-  step_num_one.style.backgroundColor = 'white'
-  step_num_one.style.color = 'black'
+//   const step_two_btn = document.querySelector('.step-two-btn')
+//   const right_side_step_three = document.querySelector('.right-side-step-three')
+//   const right_side_step_four = document.querySelector('.right-side-step-four')
 
-  back_btn_one.addEventListener('click',()=>{
-    right_side_step_one.style.display = 'block'
-    right_side_step_two.style.display = 'none'
-    step_num_one.style.backgroundColor = 'transparent'
-    step_num_one.style.color = 'white'
-  })
+//   right_side_step_one.style.display = 'none'
+//   right_side_step_two.style.display = 'block'
+//   step_num_one.style.backgroundColor = 'white'
+//   step_num_one.style.color = 'black'
 
-  back_btn_two.addEventListener('click',()=>{
-    right_side_step_three.style.display = 'none'
-    right_side_step_two.style.display = 'block'
-    step_num_two.style.backgroundColor = 'transparent'
-    step_num_two.style.color = 'white'
-  })
+//   back_btn_one.addEventListener('click',()=>{
+//     right_side_step_one.style.display = 'block'
+//     right_side_step_two.style.display = 'none'
+//     step_num_one.style.backgroundColor = 'transparent'
+//     step_num_one.style.color = 'white'
+//   })
 
-  step_two_btn.addEventListener('click',(e)=>{
-    const red_plan_text = document.querySelector('.red-plan-text')
-    plans.forEach((plan)=>{  
-      if(!hasBorder){
-        red_plan_text.style.display = 'block'
-        return step_two_btn.removeEventListener('click')
-      } 
-    })
-    red_plan_text.style.display = 'none'
-    right_side_step_two.style.display = 'none'
-    right_side_step_three.style.display = 'block'
-    step_num_two.style.backgroundColor = 'white'
-    step_num_two.style.color = 'black'
-  })
+//   back_btn_two.addEventListener('click',()=>{
+//     right_side_step_three.style.display = 'none'
+//     right_side_step_two.style.display = 'block'
+//     step_num_two.style.backgroundColor = 'transparent'
+//     step_num_two.style.color = 'white'
+//   })
 
-  const last_step_btn = document.querySelector('.last-step-btn')
+//   step_two_btn.addEventListener('click',(e)=>{
+//     const red_plan_text = document.querySelector('.red-plan-text')
+//     plans.forEach((plan)=>{  
+//       if(!hasBorder){
+//         red_plan_text.style.display = 'block'
+//         return step_two_btn.removeEventListener('click')
+//       } 
+//     })
+//     red_plan_text.style.display = 'none'
+//     right_side_step_two.style.display = 'none'
+//     right_side_step_three.style.display = 'block'
+//     step_num_two.style.backgroundColor = 'white'
+//     step_num_two.style.color = 'black'
+//   })
 
-  last_step_btn.addEventListener('click',()=>{
-    right_side_step_three.style.display = 'none'
-    right_side_step_four.style.display = 'block'
-    step_num_three.style.backgroundColor = 'white'
-    step_num_three.style.color = 'black'
-  })
+//   const last_step_btn = document.querySelector('.last-step-btn')
 
-  const last_go_back_btn = document.querySelector('.last-go-back-btn')
+//   last_step_btn.addEventListener('click',()=>{
+//     right_side_step_three.style.display = 'none'
+//     right_side_step_four.style.display = 'block'
+//     step_num_three.style.backgroundColor = 'white'
+//     step_num_three.style.color = 'black'
+//   })
 
-  last_go_back_btn.addEventListener('click',()=>{
-    right_side_step_four.style.display = 'none'
-    right_side_step_three.style.display = 'block'
-    step_num_three.style.backgroundColor = 'transparent'
-    step_num_three.style.color = 'white'
-  })
-}
+//   const last_go_back_btn = document.querySelector('.last-go-back-btn')
 
-form.addEventListener('submit', submitForm)
+//   last_go_back_btn.addEventListener('click',()=>{
+//     right_side_step_four.style.display = 'none'
+//     right_side_step_three.style.display = 'block'
+//     step_num_three.style.backgroundColor = 'transparent'
+//     step_num_three.style.color = 'white'
+//   })
+// }
 
-const back_btn_one = document.querySelector('.go-back-btn-one')
-const back_btn_two = document.querySelector('.go-back-btn-two')
+// form.addEventListener('submit', submitForm)
 
-let hasBorder = false
+// const back_btn_one = document.querySelector('.go-back-btn-one')
+// const back_btn_two = document.querySelector('.go-back-btn-two')
 
-const arcade_monthly = document.querySelector('.arcade-monthly')
-const advanced_monthly = document.querySelector('.advanced-main-monthly')
-const pro_monthly = document.querySelector('.pro-main-monthly')
+// let hasBorder = false
 
-plans.forEach((plan)=>{
-  plan.addEventListener('click',(e)=>{
-    const pick = e.currentTarget.classList;
-    if(pick.contains('arcade')){
-      arcade_monthly.style.display = 'flex'
-      advanced_monthly.style.display = 'none'
-      pro_monthly.style.display = 'none'
-      // add the arcade price function here. make a function for each of these and just use the checkbox.checked again but add the array prices only. no need for display none or flex. there a a function made for each of these? the function only contains the prices if certain checkboxes are clicked
-    }else if(pick.contains('advanced')){
-      advanced_monthly.style.display = 'flex'
-      arcade_monthly.style.display = 'none'
-      pro_monthly.style.display = 'none'
-    }else if(pick.contains('pro')){
-      pro_monthly.style.display = 'flex'
-      advanced_monthly.style.display = 'none'
-      arcade_monthly.style.display = 'none'
-    } 
-    plans.forEach((p)=>{
-      p.style.border =  '0px solid rgba(128, 0, 128, 0.466)'
-    })
-    plan.style.border =  '2px solid rgba(128, 0, 128, 0.466)'
-    hasBorder = true
-  })
-})
+// const arcade_monthly = document.querySelector('.arcade-monthly')
+// const advanced_monthly = document.querySelector('.advanced-main-monthly')
+// const pro_monthly = document.querySelector('.pro-main-monthly')
 
-const monthly_and_yearly_ball = document.querySelectorAll('.monthly-and-yearly-ball')
+// plans.forEach((plan)=>{
+//   plan.addEventListener('click',(e)=>{
+//     const pick = e.currentTarget.classList;
+//     if(pick.contains('arcade')){
+//       arcade_monthly.style.display = 'flex'
+//       advanced_monthly.style.display = 'none'
+//       pro_monthly.style.display = 'none'
 
-const yearlyPlanTextPrices = ['$108/yr', '$144/yr', '$180/yr']
-const monthlyPlanTextPrices = ['$9/mo', '$12/mo', '$15/mo']
 
-const arcade_main_yearly = document.querySelector('.arcade-main-yearly')
-const advanced_main_yearly = document.querySelector('.advanced-main-yearly')
-const pro_main_yearly = document.querySelector('.pro-main-yearly')
 
-monthly_and_yearly_ball.forEach((text)=>{
-  text.addEventListener('click',(e)=>{
-    const moveBall = e.target.textContent;
-    const ball = document.querySelector('.ball-inner')
-    let plan_cost_text = document.querySelectorAll('.plan-cost-text')
+//     }else if(pick.contains('advanced')){
+//       advanced_monthly.style.display = 'flex'
+//       arcade_monthly.style.display = 'none'
+//       pro_monthly.style.display = 'none'
 
-    const add_on_yearly_customizable_profile = document.querySelector('.add-on-yearly-customizable-profile')
-    const add_on_yearly_larger_storage = document.querySelector('.add-on-yearly-larger-storage')
-    const add_on_yearly_online_service = document.querySelector('.add-on-yearly-online-service')
+   
 
-    const online_service = document.querySelector('.online-service')
-    const larger_storage = document.querySelector('.larger-storage')
-    const customizable_profile = document.querySelector('.customizable-profile')
+//     }else if(pick.contains('pro')){
+//       pro_monthly.style.display = 'flex'
+//       advanced_monthly.style.display = 'none'
+//       arcade_monthly.style.display = 'none'
 
-    if(moveBall==='Yearly'){
-      ball.classList.add('ball-move')  
-      online_service.style.display = 'none'
-      larger_storage.style.display = 'none'
-      customizable_profile.style.display = 'none'
 
-      add_on_yearly_online_service.style.display = 'block'
-      add_on_yearly_larger_storage.style.display = 'block'
-      add_on_yearly_customizable_profile.style.display = 'block'
 
-      for(let i=0;i<plan_cost_text.length; i++){
-        plan_cost_text[i].textContent = yearlyPlanTextPrices[i]
-      } 
-      plans.forEach((plan)=>{
-        plan.addEventListener('click',(e)=>{
-          const pick = e.currentTarget.classList;
-          if(pick.contains('arcade')){
-            arcade_main_yearly.style.display = 'flex'
-            advanced_main_yearly.style.display = 'none'
-            pro_main_yearly.style.display = 'none'
-            arcade_monthly.style.display = 'none'
-          }else if(pick.contains('advanced')){
-            advanced_main_yearly.style.display = 'flex'
-            arcade_main_yearly.style.display = 'none'
-            pro_main_yearly.style.display = 'none'
-            advanced_monthly.style.display = 'none'
-          }else if(pick.contains('pro')){
-            pro_main_yearly.style.display = 'flex'
-            arcade_main_yearly.style.display = 'none'
-            advanced_main_yearly.style.display = 'none'
-            pro_monthly.style.display = 'none'
-          }
-        })
-      })
-    } else {
-      ball.classList.remove('ball-move')
-      add_on_yearly_online_service.style.display = 'none'
-      add_on_yearly_larger_storage.style.display = 'none'
-      add_on_yearly_customizable_profile.style.display = 'none'
+//     } 
+//     plans.forEach((p)=>{
+//       p.style.border =  '0px solid rgba(128, 0, 128, 0.466)'
+//     })
+//     plan.style.border =  '2px solid rgba(128, 0, 128, 0.466)'
+//     hasBorder = true
+//   })
+// })
 
-      online_service.style.display = 'block'
-      larger_storage.style.display = 'block'
-      customizable_profile.style.display = 'block'
 
-      for(let i=0;i<plan_cost_text.length; i++){
-        plan_cost_text[i].textContent = monthlyPlanTextPrices[i]
-      }  
 
-      plans.forEach((plan)=>{
-        plan.addEventListener('click',(e)=>{
-          const pick = e.currentTarget.classList;
-          if(pick.contains('arcade')){
-            arcade_main_yearly.style.display = 'none'
-            advanced_main_yearly.style.display = 'none'
-            pro_main_yearly.style.display = 'none'
-            arcade_monthly.style.display = 'flex'
-          }else if(pick.contains('advanced')){
-            advanced_main_yearly.style.display = 'none'
-            arcade_main_yearly.style.display = 'none'
-            pro_main_yearly.style.display = 'none'
-            advanced_monthly.style.display = 'flex'
-          }else if(pick.contains('pro')){
-            pro_main_yearly.style.display = 'none'
-            arcade_main_yearly.style.display = 'none'
-            advanced_main_yearly.style.display = 'none'
-            pro_monthly.style.display = 'flex'
-          }
-        })
-      })
-    } 
-  })
-})
+// const monthly_and_yearly_ball = document.querySelectorAll('.monthly-and-yearly-ball')
 
-const online_service_price_monthly = document.querySelector('.online-service-price-monthly')
-const larger_storage_price_monthly = document.querySelector('.larger-storage-price-monthly')
-const custom_profile_price_monthly = document.querySelector('.custom-profile-price-monthly')
-const final_price_monthly = document.querySelector('.final-price-monthly')
+// const yearlyPlanTextPrices = ['$108/yr', '$144/yr', '$180/yr']
+// const monthlyPlanTextPrices = ['$9/mo', '$12/mo', '$15/mo']
 
-const checkbox_monthly = document.querySelectorAll('.checkbox-monthly')
+// const arcade_main_yearly = document.querySelector('.arcade-main-yearly')
+// const advanced_main_yearly = document.querySelector('.advanced-main-yearly')
+// const pro_main_yearly = document.querySelector('.pro-main-yearly')
 
-const monthlyArcPrices = ['$9/mo', '$10/mo', '$12/mo', '$14/mo', '$13/mo', '$11/mo']
-const monthlyAdvanPrices = ['$12/mo', '$13/mo', '$14/mo', '$16/mo', '$15/mo', '$17/mo']
-const monthlyProPrices = ['$15/mo', '$16/mo', '$17/mo', '$18/mo', '$19/mo', '$20/mo']
+// monthly_and_yearly_ball.forEach((text)=>{
+//   text.addEventListener('click',(e)=>{
+//     const moveBall = e.target.textContent;
+//     const ball = document.querySelector('.ball-inner')
+//     let plan_cost_text = document.querySelectorAll('.plan-cost-text')
 
-const yearlyFinalPrices = []
+//     const add_on_yearly_customizable_profile = document.querySelector('.add-on-yearly-customizable-profile')
+//     const add_on_yearly_larger_storage = document.querySelector('.add-on-yearly-larger-storage')
+//     const add_on_yearly_online_service = document.querySelector('.add-on-yearly-online-service')
 
-function arcadeMonthlyTotalPrice(){
+//     const online_service = document.querySelector('.online-service')
+//     const larger_storage = document.querySelector('.larger-storage')
+//     const customizable_profile = document.querySelector('.customizable-profile')
 
-}
+//     if(moveBall==='Yearly'){
+//       ball.classList.add('ball-move')  
+//       online_service.style.display = 'none'
+//       larger_storage.style.display = 'none'
+//       customizable_profile.style.display = 'none'
 
-checkbox_monthly.forEach((checkMonthly)=>checkMonthly.addEventListener('click', monthlyAddOns))
+//       add_on_yearly_online_service.style.display = 'block'
+//       add_on_yearly_larger_storage.style.display = 'block'
+//       add_on_yearly_customizable_profile.style.display = 'block'
 
-function monthlyAddOns(){
-  const checkbox1 = document.getElementById('checkbox1')
-  const checkbox2 = document.getElementById('checkbox2')
-  const checkbox3 = document.getElementById('checkbox3')
-  if(checkbox1.checked && !checkbox2.checked && !checkbox3.checked){
-    online_service_price_monthly.style.display = 'flex'
-    larger_storage_price_monthly.style.display = 'none'
-    custom_profile_price_monthly.style.display = 'none'
-  }else if(checkbox1.checked && checkbox2.checked && !checkbox3.checked){
-    online_service_price_monthly.style.display = 'flex'
-    larger_storage_price_monthly.style.display = 'flex'
-    custom_profile_price_monthly.style.display = 'none'
-  }else if(checkbox1.checked && checkbox2.checked && checkbox3.checked){
-    online_service_price_monthly.style.display = 'flex'
-    larger_storage_price_monthly.style.display = 'flex'
-    custom_profile_price_monthly.style.display = 'flex'
-  }else if(!checkbox1.checked && !checkbox2.checked && !checkbox3.checked){
-    online_service_price_monthly.style.display = 'none'
-    larger_storage_price_monthly.style.display = 'none'
-    custom_profile_price_monthly.style.display = 'none'
-  }else if(!checkbox1.checked && !checkbox2.checked && checkbox3.checked){
-    online_service_price_monthly.style.display = 'none'
-    larger_storage_price_monthly.style.display = 'none'
-    custom_profile_price_monthly.style.display = 'flex'
-  }else if(!checkbox1.checked && checkbox2.checked && checkbox3.checked){
-    online_service_price_monthly.style.display = 'none'
-    larger_storage_price_monthly.style.display = 'flex'
-    custom_profile_price_monthly.style.display = 'flex'
-  }else if(!checkbox1.checked && checkbox2.checked && !checkbox3.checked){
-    online_service_price_monthly.style.display = 'none'
-    larger_storage_price_monthly.style.display = 'flex'
-    custom_profile_price_monthly.style.display = 'none'
-  }else if(checkbox1.checked && !checkbox2.checked && checkbox3.checked){
-    online_service_price_monthly.style.display = 'flex'
-    larger_storage_price_monthly.style.display = 'none'
-    custom_profile_price_monthly.style.display = 'flex'
-  }
-}
+//       for(let i=0;i<plan_cost_text.length; i++){
+//         plan_cost_text[i].textContent = yearlyPlanTextPrices[i]
+//       } 
+//       plans.forEach((plan)=>{
+//         plan.addEventListener('click',(e)=>{
+//           const pick = e.currentTarget.classList;
+//           if(pick.contains('arcade')){
+//             arcade_main_yearly.style.display = 'flex'
+//             advanced_main_yearly.style.display = 'none'
+//             pro_main_yearly.style.display = 'none'
+//             arcade_monthly.style.display = 'none'
+//           }else if(pick.contains('advanced')){
+//             advanced_main_yearly.style.display = 'flex'
+//             arcade_main_yearly.style.display = 'none'
+//             pro_main_yearly.style.display = 'none'
+//             advanced_monthly.style.display = 'none'
+//           }else if(pick.contains('pro')){
+//             pro_main_yearly.style.display = 'flex'
+//             arcade_main_yearly.style.display = 'none'
+//             advanced_main_yearly.style.display = 'none'
+//             pro_monthly.style.display = 'none'
+//           }
+//         })
+//       })
+//     } else {
+//       ball.classList.remove('ball-move')
+//       add_on_yearly_online_service.style.display = 'none'
+//       add_on_yearly_larger_storage.style.display = 'none'
+//       add_on_yearly_customizable_profile.style.display = 'none'
 
-function yearlyAddOns(){
+//       online_service.style.display = 'block'
+//       larger_storage.style.display = 'block'
+//       customizable_profile.style.display = 'block'
 
-}
+//       for(let i=0;i<plan_cost_text.length; i++){
+//         plan_cost_text[i].textContent = monthlyPlanTextPrices[i]
+//       }  
+
+//       plans.forEach((plan)=>{
+//         plan.addEventListener('click',(e)=>{
+//           const pick = e.currentTarget.classList;
+//           if(pick.contains('arcade')){
+//             arcade_main_yearly.style.display = 'none'
+//             advanced_main_yearly.style.display = 'none'
+//             pro_main_yearly.style.display = 'none'
+//             arcade_monthly.style.display = 'flex'
+//           }else if(pick.contains('advanced')){
+//             advanced_main_yearly.style.display = 'none'
+//             arcade_main_yearly.style.display = 'none'
+//             pro_main_yearly.style.display = 'none'
+//             advanced_monthly.style.display = 'flex'
+//           }else if(pick.contains('pro')){
+//             pro_main_yearly.style.display = 'none'
+//             arcade_main_yearly.style.display = 'none'
+//             advanced_main_yearly.style.display = 'none'
+//             pro_monthly.style.display = 'flex'
+//           }
+//         })
+//       })
+//     } 
+//   })
+// })
+
+// const online_service_price_monthly = document.querySelector('.online-service-price-monthly')
+// const larger_storage_price_monthly = document.querySelector('.larger-storage-price-monthly')
+// const custom_profile_price_monthly = document.querySelector('.custom-profile-price-monthly')
+
+// const final_price_monthly = document.querySelector('.final-price-monthly')
+// const final_price_monthly_text = document.querySelector('.final-price-monthly-text')
+
+// const checkbox_monthly = document.querySelectorAll('.checkbox-monthly')
+
+// const monthlyArcPrices = ['$9/mo', '$10/mo', '$12/mo', '$14/mo', '$13/mo', '$11/mo']
+// const monthlyAdvanPrices = ['$12/mo', '$13/mo', '$14/mo', '$16/mo', '$15/mo', '$17/mo']
+// const monthlyProPrices = ['$15/mo', '$16/mo', '$17/mo', '$18/mo', '$19/mo', '$20/mo']
+
+// const yearlyFinalPrices = []
+
+// function arcadeMonthlyTotalPrice(){
+//  if(checkbox1.checked && checkbox2.checked && checkbox3.checked){
+//   final_price_monthly.style.display = 'flex'
+//   final_price_monthly_text.textContent = monthlyArcPrices[3]
+//  }
+// }
+
+// checkbox_monthly.forEach((checkMonthly)=>checkMonthly.addEventListener('click', monthlyAddOns))
+
+// const checkbox1 = document.getElementById('checkbox1')
+// const checkbox2 = document.getElementById('checkbox2')
+// const checkbox3 = document.getElementById('checkbox3')
+
+// function monthlyAddOns(){
+//   if(checkbox1.checked && !checkbox2.checked && !checkbox3.checked){
+//     online_service_price_monthly.style.display = 'flex'
+//     larger_storage_price_monthly.style.display = 'none'
+//     custom_profile_price_monthly.style.display = 'none'
+//   }else if(checkbox1.checked && checkbox2.checked && !checkbox3.checked){
+//     online_service_price_monthly.style.display = 'flex'
+//     larger_storage_price_monthly.style.display = 'flex'
+//     custom_profile_price_monthly.style.display = 'none'
+//   }else if(checkbox1.checked && checkbox2.checked && checkbox3.checked){
+//     online_service_price_monthly.style.display = 'flex'
+//     larger_storage_price_monthly.style.display = 'flex'
+//     custom_profile_price_monthly.style.display = 'flex'
+//   }else if(!checkbox1.checked && !checkbox2.checked && !checkbox3.checked){
+//     online_service_price_monthly.style.display = 'none'
+//     larger_storage_price_monthly.style.display = 'none'
+//     custom_profile_price_monthly.style.display = 'none'
+//   }else if(!checkbox1.checked && !checkbox2.checked && checkbox3.checked){
+//     online_service_price_monthly.style.display = 'none'
+//     larger_storage_price_monthly.style.display = 'none'
+//     custom_profile_price_monthly.style.display = 'flex'
+//   }else if(!checkbox1.checked && checkbox2.checked && checkbox3.checked){
+//     online_service_price_monthly.style.display = 'none'
+//     larger_storage_price_monthly.style.display = 'flex'
+//     custom_profile_price_monthly.style.display = 'flex'
+//   }else if(!checkbox1.checked && checkbox2.checked && !checkbox3.checked){
+//     online_service_price_monthly.style.display = 'none'
+//     larger_storage_price_monthly.style.display = 'flex'
+//     custom_profile_price_monthly.style.display = 'none'
+//   }else if(checkbox1.checked && !checkbox2.checked && checkbox3.checked){
+//     online_service_price_monthly.style.display = 'flex'
+//     larger_storage_price_monthly.style.display = 'none'
+//     custom_profile_price_monthly.style.display = 'flex'
+//   }
+// }
+
+// function yearlyAddOns(){
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
