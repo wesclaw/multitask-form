@@ -199,15 +199,22 @@ monthly_and_yearly_ball.forEach((text)=>{
   })
 })
 
-const monthlyFinalPrices = []
-const yearlyFinalPrices = []
-
 const online_service_price_monthly = document.querySelector('.online-service-price-monthly')
 const larger_storage_price_monthly = document.querySelector('.larger-storage-price-monthly')
 const custom_profile_price_monthly = document.querySelector('.custom-profile-price-monthly')
 const final_price_monthly = document.querySelector('.final-price-monthly')
 
 const checkbox_monthly = document.querySelectorAll('.checkbox-monthly')
+
+const monthlyArcPrices = ['$9/mo', '$10/mo', '$12/mo', '$14/mo', '$13/mo', '$11/mo']
+const monthlyAdvanPrices = ['$12/mo', '$13/mo', '$14/mo', '$16/mo', '$15/mo', '$17/mo']
+const monthlyProPrices = ['$15/mo', '$16/mo', '$17/mo', '$18/mo', '$19/mo', '$20/mo']
+
+const yearlyFinalPrices = []
+
+function arcadeMonthlyTotalPrice(){
+
+}
 
 checkbox_monthly.forEach((checkMonthly)=>checkMonthly.addEventListener('click', monthlyAddOns))
 
