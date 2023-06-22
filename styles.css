@@ -17,6 +17,10 @@ html{
   overflow-x: hidden;
 }
 
+.classListBorder{
+  border: 2px solid rgba(128, 0, 128, 0.466);
+}
+
 /*YEARLY AND MONTHLY FOR DISPLAY NONE */
  
 .pro-main-yearly{
