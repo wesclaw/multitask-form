@@ -80,6 +80,8 @@
 // const advanced_monthly = document.querySelector('.advanced-main-monthly')
 // const pro_monthly = document.querySelector('.pro-main-monthly')
 
+// const addOns = document.querySelectorAll('.add-on')
+
 // plans.forEach((plan)=>{
 //   plan.addEventListener('click',(e)=>{
 //     const pick = e.currentTarget.classList;
@@ -88,8 +90,7 @@
 //       advanced_monthly.style.display = 'none'
 //       pro_monthly.style.display = 'none'
 
-
-
+    
 //     }else if(pick.contains('advanced')){
 //       advanced_monthly.style.display = 'flex'
 //       arcade_monthly.style.display = 'none'
@@ -218,22 +219,37 @@
 // const final_price_monthly = document.querySelector('.final-price-monthly')
 // const final_price_monthly_text = document.querySelector('.final-price-monthly-text')
 
-// const checkbox_monthly = document.querySelectorAll('.checkbox-monthly')
+// // const checkbox_monthly = document.querySelectorAll('.checkbox-monthly')
 
 // const monthlyArcPrices = ['$9/mo', '$10/mo', '$12/mo', '$14/mo', '$13/mo', '$11/mo']
 // const monthlyAdvanPrices = ['$12/mo', '$13/mo', '$14/mo', '$16/mo', '$15/mo', '$17/mo']
 // const monthlyProPrices = ['$15/mo', '$16/mo', '$17/mo', '$18/mo', '$19/mo', '$20/mo']
 
-// const yearlyFinalPrices = []
+// // const yearlyFinalPrices = []
 
-// function arcadeMonthlyTotalPrice(){
-//  if(checkbox1.checked && checkbox2.checked && checkbox3.checked){
-//   final_price_monthly.style.display = 'flex'
-//   final_price_monthly_text.textContent = monthlyArcPrices[3]
-//  }
-// }
 
-// checkbox_monthly.forEach((checkMonthly)=>checkMonthly.addEventListener('click', monthlyAddOns))
+
+// // addOns.forEach((add_on)=>{
+// //   add_on.addEventListener('click',()=>{
+// //     if(checkbox1.checked && checkbox2.checked && checkbox3.checked){
+// //       final_price_monthly.style.display = 'flex'
+// //       final_price_monthly_text.textContent = monthlyArcPrices[3]
+// //      }
+// //   })
+// // })
+
+// // function arcadeMonthlyTotalPrice(){
+// //  if(checkbox1.checked && checkbox2.checked && checkbox3.checked){
+// //   final_price_monthly.style.display = 'flex'
+// //   final_price_monthly_text.textContent = monthlyArcPrices[3]
+// //  }
+// // }
+
+
+
+
+
+// addOns.forEach((addOn)=>addOn.addEventListener('click', monthlyAddOns))
 
 // const checkbox1 = document.getElementById('checkbox1')
 // const checkbox2 = document.getElementById('checkbox2')
@@ -400,3 +416,21 @@ go_back_btn_two.addEventListener('click',()=>{
   right_side_step_two.style.display = 'block'
 })
 
+const right_side_step_four = document.querySelector('.right-side-step-four')
+const last_step_btn = document.querySelector('.last-step-btn')
+
+last_step_btn.addEventListener('click',()=>{
+  right_side_step_four.style.display = 'block'
+  right_side_step_three.style.display = 'none'
+})
+
+const last_go_back_btn = document.querySelector('.last-go-back-btn')
+
+last_go_back_btn.addEventListener('click',()=>{
+  right_side_step_four.style.display = 'none'
+  right_side_step_three.style.display = 'block'
+})
+
+
+
+// i was getting the checkbox and not the label. i was suppose to get the label only
