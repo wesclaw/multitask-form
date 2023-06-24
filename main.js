@@ -371,7 +371,7 @@ yearly_text.addEventListener('click',()=>{
   ball_inner.classList.add('ball-move')
   for(let i = 0; i < yearlyPlanTextPrices.length; i++){
     plan_cost_text[i].textContent = yearlyPlanTextPrices[i]
-  }
+  }  
   add_on_yearly_online_service.style.display = 'flex'
   add_on_yearly_larger_storage.style.display = 'flex'
   add_on_yearly_customizable_profile.style.display = 'flex'
@@ -431,6 +431,8 @@ last_go_back_btn.addEventListener('click',()=>{
   right_side_step_three.style.display = 'block'
 })
 
+// 
 
+// i want to console log after the plan is clicked and when yearly or monthly are clicked check what plan has the border 2px
 
 // i was getting the checkbox and not the label. i was suppose to get the label only
