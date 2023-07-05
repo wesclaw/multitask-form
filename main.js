@@ -302,135 +302,135 @@
 
 
 
-// const right_side_step_one = document.querySelector('.right-side-step-one')
-// const form = document.querySelector('form')
-// const right_side_step_two = document.querySelector('.right-side-step-two')
+const right_side_step_one = document.querySelector('.right-side-step-one')
+const form = document.querySelector('form')
+const right_side_step_two = document.querySelector('.right-side-step-two')
 
-// form.addEventListener('submit',(e)=>{
-//   e.preventDefault()
-//   right_side_step_one.style.display = 'none'
-//   right_side_step_two.style.display = 'block'
-// })
+form.addEventListener('submit',(e)=>{
+  e.preventDefault()
+  right_side_step_one.style.display = 'none'
+  right_side_step_two.style.display = 'block'
+})
 
-// const arcade = document.querySelector('.arcade')
-// const advanced = document.querySelector('.advanced')
-// const pro = document.querySelector('.pro')
+const arcade = document.querySelector('.arcade')
+const advanced = document.querySelector('.advanced')
+const pro = document.querySelector('.pro')
 
-// let hasBorder = false;
+let hasBorder = false;
 
-// arcade.addEventListener('click',()=>{
-//   arcade.style.border = '2px solid rgba(128, 0, 128, 0.466)'
-//   advanced.style.border = '0px'
-//   pro.style.border = '0px'
-//   hasBorder = true
-// })
+arcade.addEventListener('click',()=>{
+  arcade.style.border = '2px solid rgba(128, 0, 128, 0.466)'
+  advanced.style.border = '0px'
+  pro.style.border = '0px'
+  hasBorder = true
+})
 
-// advanced.addEventListener('click',()=>{
-//   advanced.style.border = '2px solid rgba(128, 0, 128, 0.466)'
-//   arcade.style.border = '0px'
-//   pro.style.border = '0px'
-//   hasBorder = true
-// })
+advanced.addEventListener('click',()=>{
+  advanced.style.border = '2px solid rgba(128, 0, 128, 0.466)'
+  arcade.style.border = '0px'
+  pro.style.border = '0px'
+  hasBorder = true
+})
 
-// pro.addEventListener('click',()=>{
-//   pro.style.border = '2px solid rgba(128, 0, 128, 0.466)'
-//   advanced.style.border = '0px'
-//   arcade.style.border = '0px'
-//   hasBorder = true
-// })
+pro.addEventListener('click',()=>{
+  pro.style.border = '2px solid rgba(128, 0, 128, 0.466)'
+  advanced.style.border = '0px'
+  arcade.style.border = '0px'
+  hasBorder = true
+})
 
-// const go_back_btn_one = document.querySelector('.go-back-btn-one')
+const go_back_btn_one = document.querySelector('.go-back-btn-one')
 
-// go_back_btn_one.addEventListener('click',()=>{
-//   right_side_step_one.style.display = 'block'
-//   right_side_step_two.style.display = 'none'
-// })
+go_back_btn_one.addEventListener('click',()=>{
+  right_side_step_one.style.display = 'block'
+  right_side_step_two.style.display = 'none'
+})
 
-// const yearly_text = document.querySelector('.yearly-text')
-// const monthly_text = document.querySelector('.monthly-text')
-// const ball_inner = document.querySelector('.ball-inner')
+const yearly_text = document.querySelector('.yearly-text')
+const monthly_text = document.querySelector('.monthly-text')
+const ball_inner = document.querySelector('.ball-inner')
 
-// const yearlyPlanTextPrices = ['$108/yr', '$144/yr', '$180/yr']
-// const monthlyPlanTextPrices = ['$9/mo', '$12/mo', '$15/mo']
+const yearlyPlanTextPrices = ['$108/yr', '$144/yr', '$180/yr']
+const monthlyPlanTextPrices = ['$9/mo', '$12/mo', '$15/mo']
 
-// const plan_cost_text = document.querySelectorAll('.plan-cost-text')
+const plan_cost_text = document.querySelectorAll('.plan-cost-text')
 
-// const add_on_yearly = document.querySelectorAll('.add-on-yearly')
+const add_on_yearly = document.querySelectorAll('.add-on-yearly')
 
-// const add_on_yearly_online_service = document.querySelector('.add-on-yearly-online-service')
-// const add_on_yearly_larger_storage = document.querySelector('.add-on-yearly-larger-storage')
-// const add_on_yearly_customizable_profile = document.querySelector('.add-on-yearly-customizable-profile')
+const add_on_yearly_online_service = document.querySelector('.add-on-yearly-online-service')
+const add_on_yearly_larger_storage = document.querySelector('.add-on-yearly-larger-storage')
+const add_on_yearly_customizable_profile = document.querySelector('.add-on-yearly-customizable-profile')
 
-// const customizable_profile= document.querySelector('.customizable-profile')
-// const larger_storage = document.querySelector('.larger-storage')
-// const online_service = document.querySelector('.online-service')
+const customizable_profile= document.querySelector('.customizable-profile')
+const larger_storage = document.querySelector('.larger-storage')
+const online_service = document.querySelector('.online-service')
 
 
-// yearly_text.addEventListener('click',()=>{
-//   ball_inner.classList.add('ball-move')
-//   for(let i = 0; i < yearlyPlanTextPrices.length; i++){
-//     plan_cost_text[i].textContent = yearlyPlanTextPrices[i]
-//   }  
-//   add_on_yearly_online_service.style.display = 'flex'
-//   add_on_yearly_larger_storage.style.display = 'flex'
-//   add_on_yearly_customizable_profile.style.display = 'flex'
+yearly_text.addEventListener('click',()=>{
+  ball_inner.classList.add('ball-move')
+  for(let i = 0; i < yearlyPlanTextPrices.length; i++){
+    plan_cost_text[i].textContent = yearlyPlanTextPrices[i]
+  }  
+  add_on_yearly_online_service.style.display = 'flex'
+  add_on_yearly_larger_storage.style.display = 'flex'
+  add_on_yearly_customizable_profile.style.display = 'flex'
 
-//   customizable_profile.style.display = 'none'
-//   larger_storage.style.display = 'none'
-//   online_service.style.display = 'none'
-// })
+  customizable_profile.style.display = 'none'
+  larger_storage.style.display = 'none'
+  online_service.style.display = 'none'
+})
 
-// monthly_text.addEventListener('click',()=>{
-//   ball_inner.classList.remove('ball-move')
-//   for(let i = 0; i < monthlyPlanTextPrices.length; i++){
-//     plan_cost_text[i].textContent = monthlyPlanTextPrices[i]
-//   }
-//   customizable_profile.style.display = 'flex'
-//   larger_storage.style.display = 'flex'
-//   online_service.style.display = 'flex'
+monthly_text.addEventListener('click',()=>{
+  ball_inner.classList.remove('ball-move')
+  for(let i = 0; i < monthlyPlanTextPrices.length; i++){
+    plan_cost_text[i].textContent = monthlyPlanTextPrices[i]
+  }
+  customizable_profile.style.display = 'flex'
+  larger_storage.style.display = 'flex'
+  online_service.style.display = 'flex'
 
-//   add_on_yearly_online_service.style.display = 'none'
-//   add_on_yearly_larger_storage.style.display = 'none'
-//   add_on_yearly_customizable_profile.style.display = 'none'
-// })
+  add_on_yearly_online_service.style.display = 'none'
+  add_on_yearly_larger_storage.style.display = 'none'
+  add_on_yearly_customizable_profile.style.display = 'none'
+})
 
-// const step_two_btn = document.querySelector('.step-two-btn')
-// const right_side_step_three = document.querySelector('.right-side-step-three')
-// const red_plan_text = document.querySelector('.red-plan-text')
+const step_two_btn = document.querySelector('.step-two-btn')
+const right_side_step_three = document.querySelector('.right-side-step-three')
+const red_plan_text = document.querySelector('.red-plan-text')
 
-// step_two_btn.addEventListener('click',()=>{
-//   if(hasBorder===true){
-//     right_side_step_two.style.display = 'none'
-//     right_side_step_three.style.display = 'block'
-//     red_plan_text.style.display = 'none'
-//   }else{
-//     red_plan_text.style.display = 'block'
-//   }
-// })
+step_two_btn.addEventListener('click',()=>{
+  if(hasBorder===true){
+    right_side_step_two.style.display = 'none'
+    right_side_step_three.style.display = 'block'
+    red_plan_text.style.display = 'none'
+  }else{
+    red_plan_text.style.display = 'block'
+  }
+})
 
-// const go_back_btn_two = document.querySelector('.go-back-btn-two')
+const go_back_btn_two = document.querySelector('.go-back-btn-two')
 
-// go_back_btn_two.addEventListener('click',()=>{
-//   right_side_step_three.style.display = 'none'
-//   right_side_step_two.style.display = 'block'
-// })
+go_back_btn_two.addEventListener('click',()=>{
+  right_side_step_three.style.display = 'none'
+  right_side_step_two.style.display = 'block'
+})
 
-// const right_side_step_four = document.querySelector('.right-side-step-four')
-// const last_step_btn = document.querySelector('.last-step-btn')
+const right_side_step_four = document.querySelector('.right-side-step-four')
+const last_step_btn = document.querySelector('.last-step-btn')
 
-// last_step_btn.addEventListener('click',()=>{
-//   right_side_step_four.style.display = 'block'
-//   right_side_step_three.style.display = 'none'
-// })
+last_step_btn.addEventListener('click',()=>{
+  right_side_step_four.style.display = 'block'
+  right_side_step_three.style.display = 'none'
+})
 
-// const last_go_back_btn = document.querySelector('.last-go-back-btn')
+const last_go_back_btn = document.querySelector('.last-go-back-btn')
 
-// last_go_back_btn.addEventListener('click',()=>{
-//   right_side_step_four.style.display = 'none'
-//   right_side_step_three.style.display = 'block'
-// })
+last_go_back_btn.addEventListener('click',()=>{
+  right_side_step_four.style.display = 'none'
+  right_side_step_three.style.display = 'block'
+})
 
-// 
+
 
 // i want to console log after the plan is clicked and when yearly or monthly are clicked check what plan has the border 2px
 
