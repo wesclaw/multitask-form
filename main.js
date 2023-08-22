@@ -318,25 +318,151 @@ const pro = document.querySelector('.pro')
 
 let hasBorder = false;
 
+// monthly make these display block on click for each plan
+const arcade_monthly = document.querySelector('.arcade-monthly')
+const advanced_monthly = document.querySelector('.advanced-main-monthly')
+const pro_monthly = document.querySelector('.pro-main-monthly')
+// 
+// yearly 
+const arcade_main_yearly = document.querySelector('.arcade-main-yearly')
+const advanced_main_yearly = document.querySelector('.advanced-main-yearly')
+const pro_main_yearly = document.querySelector('.pro-main-yearly')
+ // 
+
 arcade.addEventListener('click',()=>{
-  arcade.style.border = '2px solid rgba(128, 0, 128, 0.466)'
-  advanced.style.border = '0px'
-  pro.style.border = '0px'
+  arcade.classList.add('plan-active-click')
+  advanced.classList.remove('plan-active-click')
+  pro.classList.remove('plan-active-click')
+  
   hasBorder = true
+
+  arcade_monthly.style.display = 'flex'
+  advanced_monthly.style.display = 'none'
+  pro_monthly.style.display = 'none'
+  // 
+
+  // 
+  arcade_main_yearly.style.display = 'none'
+  advanced_main_yearly.style.display = 'none'
+  pro_main_yearly.style.display = 'none'
+  // 
+ 
+  // 
+  if(arcade.classList.contains("plan-active-click")){
+    console.log('the arcade has a border') ///need to addd the above code for display none to each of these if statements
+    arcade_monthly.style.display = 'flex'
+    advanced_monthly.style.display = 'none'
+    pro_monthly.style.display = 'none'
+  }else if(advanced.classList.contains('plan-active-click')){
+    console.log('advanced has a border')
+    // all three here but switch arcade none
+    arcade_monthly.style.display = 'none'
+    advanced_monthly.style.display = 'flex'
+    pro_monthly.style.display = 'none'
+  }else if(pro.classList.contains('pro')){
+    console.log('pro has a border')
+    // all three here
+    arcade_monthly.style.display = 'none'
+    advanced_monthly.style.display = 'none'
+    pro_monthly.style.display = 'flex'
+  }
+
+  // check to see if the ball has a classlist added or not and then console.log based on that
+  if(ball_inner.classList.contains('ball-move')){
+    console.log('yearly')
+    // yearly 3 here
+    // 
+    arcade_main_yearly.style.display = 'flex'
+    advanced_main_yearly.style.display = 'none'
+    pro_main_yearly.style.display = 'none'
+    // 
+  }else{
+    console.log('monthly')
+    // we are still in the arcade listener. so we dont need to check for the other plans just add the 3 here with arcade display flex
+  }
 })
 
 advanced.addEventListener('click',()=>{
-  advanced.style.border = '2px solid rgba(128, 0, 128, 0.466)'
-  arcade.style.border = '0px'
-  pro.style.border = '0px'
+  advanced.classList.add('plan-active-click')
+  pro.classList.remove('plan-active-click')
+  arcade.classList.remove('plan-active-click')
   hasBorder = true
+  // 
+  arcade_monthly.style.display = 'none'
+  advanced_monthly.style.display = 'flex'
+  pro_monthly.style.display = 'none'
+  // 
+   // 
+   arcade_main_yearly.style.display = 'none'
+   advanced_main_yearly.style.display = 'none'
+   pro_main_yearly.style.display = 'none'
+   // 
+  // 
+  if(arcade.classList.contains("plan-active-click")){
+    console.log('the arcade has a border')
+    arcade_monthly.style.display = 'flex'
+    advanced_monthly.style.display = 'none'
+    pro_monthly.style.display = 'none'
+  }else if(advanced.classList.contains('plan-active-click')){
+    console.log('advanced has a border')
+    arcade_monthly.style.display = 'none'
+    advanced_monthly.style.display = 'flex'
+    pro_monthly.style.display = 'none'
+  }else if(pro.classList.contains('pro')){
+    console.log('pro has a border')
+    arcade_monthly.style.display = 'none'
+    advanced_monthly.style.display = 'none'
+    pro_monthly.style.display = 'flex'
+  }
+
+  // check to see if the ball has a classlist added or not and then console.log based on that
+  if(ball_inner.classList.contains('ball-move')){
+    console.log('yearly')
+  }else{
+    console.log('monthly')
+  }
 })
 
 pro.addEventListener('click',()=>{
-  pro.style.border = '2px solid rgba(128, 0, 128, 0.466)'
-  advanced.style.border = '0px'
-  arcade.style.border = '0px'
+  pro.classList.add('plan-active-click')
+  advanced.classList.remove('plan-active-click')
+  arcade.classList.remove('plan-active-click')
   hasBorder = true
+
+  // 
+  arcade_monthly.style.display = 'none'
+  advanced_monthly.style.display = 'none'
+  pro_monthly.style.display = 'flex'
+  // 
+   // 
+   arcade_main_yearly.style.display = 'none'
+   advanced_main_yearly.style.display = 'none'
+   pro_main_yearly.style.display = 'none'
+   // 
+  // 
+  if(arcade.classList.contains("plan-active-click")){
+    console.log('the arcade has a border')
+    arcade_monthly.style.display = 'flex'
+    advanced_monthly.style.display = 'none'
+    pro_monthly.style.display = 'none'
+  }else if(advanced.classList.contains('plan-active-click')){
+    console.log('advanced has a border')
+    arcade_monthly.style.display = 'none'
+    advanced_monthly.style.display = 'flex'
+    pro_monthly.style.display = 'none'
+  }else if(pro.classList.contains('pro')){
+    console.log('pro has a border')
+    arcade_monthly.style.display = 'none'
+    advanced_monthly.style.display = 'none'
+    pro_monthly.style.display = 'flex'
+  }
+  
+  // check to see if the ball has a classlist added or not and then console.log based on that
+  if(ball_inner.classList.contains('ball-move')){
+    console.log('yearly')
+  }else{
+    console.log('monthly')
+  }
 })
 
 const go_back_btn_one = document.querySelector('.go-back-btn-one')
@@ -378,6 +504,46 @@ yearly_text.addEventListener('click',()=>{
   customizable_profile.style.display = 'none'
   larger_storage.style.display = 'none'
   online_service.style.display = 'none'
+ 
+  // need to add all the display none again here. code gets big and messy
+  if(arcade.classList.contains("plan-active-click")){
+    console.log('the arcade has a yearly border')
+    // 
+    arcade_main_yearly.style.display = 'flex'
+    advanced_main_yearly.style.display = 'none'
+    pro_main_yearly.style.display = 'none'
+    //
+    // 
+    arcade_monthly.style.display = 'none'
+    advanced_monthly.style.display = 'none'
+    pro_monthly.style.display = 'none'
+    // 
+  }else if(advanced.classList.contains('plan-active-click')){
+    console.log('advanced has a yearly border')
+    // 
+    arcade_main_yearly.style.display = 'none'
+    advanced_main_yearly.style.display = 'flex'
+    pro_main_yearly.style.display = 'none'
+    // 
+    // 
+    arcade_monthly.style.display = 'none'
+    advanced_monthly.style.display = 'none'
+    pro_monthly.style.display = 'none'
+    // 
+  }else if(pro.classList.contains('pro')){
+    console.log('pro has a yearly border')
+    // 
+    arcade_main_yearly.style.display = 'none'
+    advanced_main_yearly.style.display = 'none'
+    pro_main_yearly.style.display = 'flex'
+    // 
+
+    // 
+    arcade_monthly.style.display = 'none'
+    advanced_monthly.style.display = 'none'
+    pro_monthly.style.display = 'none'
+    // 
+  }
 })
 
 monthly_text.addEventListener('click',()=>{
@@ -392,6 +558,46 @@ monthly_text.addEventListener('click',()=>{
   add_on_yearly_online_service.style.display = 'none'
   add_on_yearly_larger_storage.style.display = 'none'
   add_on_yearly_customizable_profile.style.display = 'none'
+
+  // 
+  if(arcade.classList.contains("plan-active-click")){
+    console.log('the arcade has a monthly border')
+    // 
+    arcade_monthly.style.display = 'flex'
+    advanced_monthly.style.display = 'none'
+    pro_monthly.style.display = 'none'
+    // 
+    arcade_main_yearly.style.display = 'none'
+    advanced_main_yearly.style.display = 'none'
+    pro_main_yearly.style.display = 'none'
+    // 
+  }else if(advanced.classList.contains('plan-active-click')){
+    console.log('advanced has a monthly border')
+    // 
+    arcade_monthly.style.display = 'none'
+    advanced_monthly.style.display = 'flex'
+    pro_monthly.style.display = 'none'
+    // 
+
+    // 
+    arcade_main_yearly.style.display = 'none'
+    advanced_main_yearly.style.display = 'none'
+    pro_main_yearly.style.display = 'none'
+    // 
+  }else if(pro.classList.contains('pro')){
+    console.log('pro has a monthly border')
+    // 
+    arcade_monthly.style.display = 'none'
+    advanced_monthly.style.display = 'none'
+    pro_monthly.style.display = 'flex'
+    // 
+
+    // 
+    arcade_main_yearly.style.display = 'none'
+    advanced_main_yearly.style.display = 'none'
+    pro_main_yearly.style.display = 'none'
+    // 
+  }
 })
 
 const step_two_btn = document.querySelector('.step-two-btn')
