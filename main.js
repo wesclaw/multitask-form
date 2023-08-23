@@ -246,20 +246,22 @@
 
 
 
-// addOns.forEach((addOn)=>addOn.addEventListener('click', monthlyAddOns))
-
 const online_service_price_monthly = document.querySelector('.online-service-price-monthly')
 const larger_storage_price_monthly = document.querySelector('.larger-storage-price-monthly')
 const custom_profile_price_monthly = document.querySelector('.custom-profile-price-monthly')
 
 
-// call the function in the monthly and click events?
+// call the function in the monthly and year events?
 
 const checkbox1 = document.getElementById('checkbox1')
 const checkbox2 = document.getElementById('checkbox2')
 const checkbox3 = document.getElementById('checkbox3')
 
+
 function monthlyAddOns(){
+  // need to remove the monthly and yearly addons for each time
+    
+  // remove the yearly ones here
   if(checkbox1.checked && !checkbox2.checked && !checkbox3.checked){
     online_service_price_monthly.style.display = 'flex'
     larger_storage_price_monthly.style.display = 'none'
@@ -295,12 +297,58 @@ function monthlyAddOns(){
   }
 }
 
-// function yearlyAddOns(){
+// 
+const online_service_price_yearly = document.querySelector('.online-service-price-yearly')
+const larger_storage_price_yearly = document.querySelector('.larger-storage-price-yearly')
+const custom_profile_price_yearly = document.querySelector('.custom-profile-price-yearly')
+// 
 
-// }
+function yearlyAddOns(){
+  
+  if(checkbox1.checked && !checkbox2.checked && !checkbox3.checked){
+    online_service_price_yearly.style.display = 'flex'
+    larger_storage_price_yearly.style.display = 'none'
+    custom_profile_price_yearly.style.display = 'none'
+  }else if(checkbox1.checked && checkbox2.checked && !checkbox3.checked){
+    online_service_price_yearly.style.display = 'flex'
+    larger_storage_price_yearly.style.display = 'flex'
+    custom_profile_price_yearly.style.display = 'none'
+  }else if(checkbox1.checked && checkbox2.checked && checkbox3.checked){
+    online_service_price_yearly.style.display = 'flex'
+    larger_storage_price_yearly.style.display = 'flex'
+    custom_profile_price_yearly.style.display = 'flex'
+  }else if(!checkbox1.checked && !checkbox2.checked && !checkbox3.checked){
+    online_service_price_yearly.style.display = 'none'
+    larger_storage_price_yearly.style.display = 'none'
+    custom_profile_price_yearly.style.display = 'none'
+  }else if(!checkbox1.checked && !checkbox2.checked && checkbox3.checked){
+    online_service_price_yearly.style.display = 'none'
+    larger_storage_price_yearly.style.display = 'none'
+    custom_profile_price_yearly.style.display = 'flex'
+  }else if(!checkbox1.checked && checkbox2.checked && checkbox3.checked){
+    online_service_price_yearly.style.display = 'none'
+    larger_storage_price_yearly.style.display = 'flex'
+    custom_profile_price_yearly.style.display = 'flex'
+  }else if(!checkbox1.checked && checkbox2.checked && !checkbox3.checked){
+    online_service_price_yearly.style.display = 'none'
+    larger_storage_price_yearly.style.display = 'flex'
+    custom_profile_price_yearly.style.display = 'none'
+  }else if(checkbox1.checked && !checkbox2.checked && checkbox3.checked){
+    online_service_price_yearly.style.display = 'flex'
+    larger_storage_price_yearly.style.display = 'none'
+    custom_profile_price_yearly.style.display = 'flex'
+  }
+}
 
+const add_on_yearly_input = document.querySelectorAll('.add-on-yearly-input')
 
+add_on_yearly_input.forEach((year_add_on)=>year_add_on.addEventListener('click', yearlyAddOns))
 
+// 
+
+const addOns = document.querySelectorAll('.add-on')
+
+addOns.forEach((addOn)=>addOn.addEventListener('click', monthlyAddOns))
 
 
 const right_side_step_one = document.querySelector('.right-side-step-one')
@@ -347,7 +395,7 @@ arcade.addEventListener('click',()=>{
   advanced_main_yearly.style.display = 'none'
   pro_main_yearly.style.display = 'none'
   // 
-  monthlyAddOns()
+ 
   // 
   if(arcade.classList.contains("plan-active-click")){
     console.log('the arcade has a border') ///need to addd the above code for display none to each of these if statements
@@ -540,7 +588,7 @@ const monthlyPlanTextPrices = ['$9/mo', '$12/mo', '$15/mo']
 const plan_cost_text = document.querySelectorAll('.plan-cost-text')
 
 const add_on_yearly = document.querySelectorAll('.add-on-yearly')
-
+// 
 const add_on_yearly_online_service = document.querySelector('.add-on-yearly-online-service')
 const add_on_yearly_larger_storage = document.querySelector('.add-on-yearly-larger-storage')
 const add_on_yearly_customizable_profile = document.querySelector('.add-on-yearly-customizable-profile')

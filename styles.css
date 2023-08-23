@@ -583,3 +583,15 @@ input{
 .plan-active-click{
   border: 2px solid rgba(128, 0, 128, 0.466);
 }
+
+.online-service-price-yearly{
+  display: none;
+}
+
+.larger-storage-price-yearly{
+  display: none;
+}
+
+.custom-profile-price-yearly{
+  display: none;
+}
