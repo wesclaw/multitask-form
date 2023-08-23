@@ -211,9 +211,7 @@
 //   })
 // })
 
-// const online_service_price_monthly = document.querySelector('.online-service-price-monthly')
-// const larger_storage_price_monthly = document.querySelector('.larger-storage-price-monthly')
-// const custom_profile_price_monthly = document.querySelector('.custom-profile-price-monthly')
+
 
 // const final_price_monthly = document.querySelector('.final-price-monthly')
 // const final_price_monthly_text = document.querySelector('.final-price-monthly-text')
@@ -250,53 +248,56 @@
 
 // addOns.forEach((addOn)=>addOn.addEventListener('click', monthlyAddOns))
 
-// const checkbox1 = document.getElementById('checkbox1')
-// const checkbox2 = document.getElementById('checkbox2')
-// const checkbox3 = document.getElementById('checkbox3')
+const online_service_price_monthly = document.querySelector('.online-service-price-monthly')
+const larger_storage_price_monthly = document.querySelector('.larger-storage-price-monthly')
+const custom_profile_price_monthly = document.querySelector('.custom-profile-price-monthly')
 
-// function monthlyAddOns(){
-//   if(checkbox1.checked && !checkbox2.checked && !checkbox3.checked){
-//     online_service_price_monthly.style.display = 'flex'
-//     larger_storage_price_monthly.style.display = 'none'
-//     custom_profile_price_monthly.style.display = 'none'
-//   }else if(checkbox1.checked && checkbox2.checked && !checkbox3.checked){
-//     online_service_price_monthly.style.display = 'flex'
-//     larger_storage_price_monthly.style.display = 'flex'
-//     custom_profile_price_monthly.style.display = 'none'
-//   }else if(checkbox1.checked && checkbox2.checked && checkbox3.checked){
-//     online_service_price_monthly.style.display = 'flex'
-//     larger_storage_price_monthly.style.display = 'flex'
-//     custom_profile_price_monthly.style.display = 'flex'
-//   }else if(!checkbox1.checked && !checkbox2.checked && !checkbox3.checked){
-//     online_service_price_monthly.style.display = 'none'
-//     larger_storage_price_monthly.style.display = 'none'
-//     custom_profile_price_monthly.style.display = 'none'
-//   }else if(!checkbox1.checked && !checkbox2.checked && checkbox3.checked){
-//     online_service_price_monthly.style.display = 'none'
-//     larger_storage_price_monthly.style.display = 'none'
-//     custom_profile_price_monthly.style.display = 'flex'
-//   }else if(!checkbox1.checked && checkbox2.checked && checkbox3.checked){
-//     online_service_price_monthly.style.display = 'none'
-//     larger_storage_price_monthly.style.display = 'flex'
-//     custom_profile_price_monthly.style.display = 'flex'
-//   }else if(!checkbox1.checked && checkbox2.checked && !checkbox3.checked){
-//     online_service_price_monthly.style.display = 'none'
-//     larger_storage_price_monthly.style.display = 'flex'
-//     custom_profile_price_monthly.style.display = 'none'
-//   }else if(checkbox1.checked && !checkbox2.checked && checkbox3.checked){
-//     online_service_price_monthly.style.display = 'flex'
-//     larger_storage_price_monthly.style.display = 'none'
-//     custom_profile_price_monthly.style.display = 'flex'
-//   }
-// }
+
+// call the function in the monthly and click events?
+
+const checkbox1 = document.getElementById('checkbox1')
+const checkbox2 = document.getElementById('checkbox2')
+const checkbox3 = document.getElementById('checkbox3')
+
+function monthlyAddOns(){
+  if(checkbox1.checked && !checkbox2.checked && !checkbox3.checked){
+    online_service_price_monthly.style.display = 'flex'
+    larger_storage_price_monthly.style.display = 'none'
+    custom_profile_price_monthly.style.display = 'none'
+  }else if(checkbox1.checked && checkbox2.checked && !checkbox3.checked){
+    online_service_price_monthly.style.display = 'flex'
+    larger_storage_price_monthly.style.display = 'flex'
+    custom_profile_price_monthly.style.display = 'none'
+  }else if(checkbox1.checked && checkbox2.checked && checkbox3.checked){
+    online_service_price_monthly.style.display = 'flex'
+    larger_storage_price_monthly.style.display = 'flex'
+    custom_profile_price_monthly.style.display = 'flex'
+  }else if(!checkbox1.checked && !checkbox2.checked && !checkbox3.checked){
+    online_service_price_monthly.style.display = 'none'
+    larger_storage_price_monthly.style.display = 'none'
+    custom_profile_price_monthly.style.display = 'none'
+  }else if(!checkbox1.checked && !checkbox2.checked && checkbox3.checked){
+    online_service_price_monthly.style.display = 'none'
+    larger_storage_price_monthly.style.display = 'none'
+    custom_profile_price_monthly.style.display = 'flex'
+  }else if(!checkbox1.checked && checkbox2.checked && checkbox3.checked){
+    online_service_price_monthly.style.display = 'none'
+    larger_storage_price_monthly.style.display = 'flex'
+    custom_profile_price_monthly.style.display = 'flex'
+  }else if(!checkbox1.checked && checkbox2.checked && !checkbox3.checked){
+    online_service_price_monthly.style.display = 'none'
+    larger_storage_price_monthly.style.display = 'flex'
+    custom_profile_price_monthly.style.display = 'none'
+  }else if(checkbox1.checked && !checkbox2.checked && checkbox3.checked){
+    online_service_price_monthly.style.display = 'flex'
+    larger_storage_price_monthly.style.display = 'none'
+    custom_profile_price_monthly.style.display = 'flex'
+  }
+}
 
 // function yearlyAddOns(){
 
 // }
-
-
-
-
 
 
 
@@ -346,7 +347,7 @@ arcade.addEventListener('click',()=>{
   advanced_main_yearly.style.display = 'none'
   pro_main_yearly.style.display = 'none'
   // 
- 
+  monthlyAddOns()
   // 
   if(arcade.classList.contains("plan-active-click")){
     console.log('the arcade has a border') ///need to addd the above code for display none to each of these if statements
@@ -376,9 +377,24 @@ arcade.addEventListener('click',()=>{
     advanced_main_yearly.style.display = 'none'
     pro_main_yearly.style.display = 'none'
     // 
+    // ? add the display none to all three plans here?
+    arcade_monthly.style.display = 'none'
+    advanced_monthly.style.display = 'none'
+    pro_monthly.style.display = 'none'
+    // 
   }else{
     console.log('monthly')
     // we are still in the arcade listener. so we dont need to check for the other plans just add the 3 here with arcade display flex
+    // 
+    arcade_monthly.style.display = 'flex'
+    advanced_monthly.style.display = 'none'
+    pro_monthly.style.display = 'none'
+    // 
+    // 
+    arcade_main_yearly.style.display = 'none'
+    advanced_main_yearly.style.display = 'none'
+    pro_main_yearly.style.display = 'none'
+    // 
   }
 })
 
@@ -408,7 +424,8 @@ advanced.addEventListener('click',()=>{
     arcade_monthly.style.display = 'none'
     advanced_monthly.style.display = 'flex'
     pro_monthly.style.display = 'none'
-  }else if(pro.classList.contains('pro')){
+  }else if(pro.classList.contains('plan-active-click')){
+    ///classlist of pro??? or plan-active-click
     console.log('pro has a border')
     arcade_monthly.style.display = 'none'
     advanced_monthly.style.display = 'none'
@@ -418,8 +435,29 @@ advanced.addEventListener('click',()=>{
   // check to see if the ball has a classlist added or not and then console.log based on that
   if(ball_inner.classList.contains('ball-move')){
     console.log('yearly')
+    // 
+    arcade_main_yearly.style.display = 'none'
+    advanced_main_yearly.style.display = 'flex'
+    pro_main_yearly.style.display = 'none'
+    // 
+
+    // this is where the bug was?
+    arcade_monthly.style.display = 'none'
+    advanced_monthly.style.display = 'none'
+    pro_monthly.style.display = 'none'
+    // 
   }else{
     console.log('monthly')
+    // 
+    arcade_monthly.style.display = 'none'
+    advanced_monthly.style.display = 'flex'
+    pro_monthly.style.display = 'none'
+    // 
+    // 
+    arcade_main_yearly.style.display = 'none'
+    advanced_main_yearly.style.display = 'none'
+    pro_main_yearly.style.display = 'none'
+    // 
   }
 })
 
@@ -450,7 +488,8 @@ pro.addEventListener('click',()=>{
     arcade_monthly.style.display = 'none'
     advanced_monthly.style.display = 'flex'
     pro_monthly.style.display = 'none'
-  }else if(pro.classList.contains('pro')){
+  }else if(pro.classList.contains('plan-active-click')){
+    // pro classlist?? or plan-active-click?
     console.log('pro has a border')
     arcade_monthly.style.display = 'none'
     advanced_monthly.style.display = 'none'
@@ -460,8 +499,27 @@ pro.addEventListener('click',()=>{
   // check to see if the ball has a classlist added or not and then console.log based on that
   if(ball_inner.classList.contains('ball-move')){
     console.log('yearly')
+    // 
+    arcade_main_yearly.style.display = 'none'
+    advanced_main_yearly.style.display = 'none'
+    pro_main_yearly.style.display = 'flex'
+    // 
+    // this is where the bug was?
+    arcade_monthly.style.display = 'none'
+    advanced_monthly.style.display = 'none'
+    pro_monthly.style.display = 'none'
+    // 
   }else{
     console.log('monthly')
+    // 
+    arcade_monthly.style.display = 'none'
+    advanced_monthly.style.display = 'none'
+    pro_monthly.style.display = 'flex'
+    // 
+    arcade_main_yearly.style.display = 'none'
+    advanced_main_yearly.style.display = 'none'
+    pro_main_yearly.style.display = 'none'
+    // 
   }
 })
 
