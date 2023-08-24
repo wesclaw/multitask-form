@@ -598,4 +598,14 @@ input{
   display: none;
 }
 
+/* why is above display none? */
+/* add on for the monthly checkboxes */ 
+/* .add-on{
+  display: none;
+}
+
+.get-year-add-on{
+  display: none;
+} */
+
 /*  */

@@ -260,7 +260,7 @@ const checkbox3 = document.getElementById('checkbox3')
 
 function monthlyAddOns(){
   // need to remove the monthly and yearly addons for each time
-    
+  
   // remove the yearly ones here
   if(checkbox1.checked && !checkbox2.checked && !checkbox3.checked){
     online_service_price_monthly.style.display = 'flex'
@@ -298,53 +298,63 @@ function monthlyAddOns(){
 }
 
 // 
-const online_service_price_yearly = document.querySelector('.online-service-price-yearly')
-const larger_storage_price_yearly = document.querySelector('.larger-storage-price-yearly')
-const custom_profile_price_yearly = document.querySelector('.custom-profile-price-yearly')
+// const online_service_price_yearly = document.querySelector('.online-service-price-yearly')
+// const larger_storage_price_yearly = document.querySelector('.larger-storage-price-yearly')
+// const custom_profile_price_yearly = document.querySelector('.custom-profile-price-yearly')
 // 
 
-function yearlyAddOns(){
-  ///should i call this function in the yearly e listener click and then call the monthly one when monthly is clicked and change based on the console log
-  if(checkbox1.checked && !checkbox2.checked && !checkbox3.checked){
-    online_service_price_yearly.style.display = 'flex'
-    larger_storage_price_yearly.style.display = 'none'
-    custom_profile_price_yearly.style.display = 'none'
-  }else if(checkbox1.checked && checkbox2.checked && !checkbox3.checked){
-    online_service_price_yearly.style.display = 'flex'
-    larger_storage_price_yearly.style.display = 'flex'
-    custom_profile_price_yearly.style.display = 'none'
-  }else if(checkbox1.checked && checkbox2.checked && checkbox3.checked){
-    online_service_price_yearly.style.display = 'flex'
-    larger_storage_price_yearly.style.display = 'flex'
-    custom_profile_price_yearly.style.display = 'flex'
-  }else if(!checkbox1.checked && !checkbox2.checked && !checkbox3.checked){
-    online_service_price_yearly.style.display = 'none'
-    larger_storage_price_yearly.style.display = 'none'
-    custom_profile_price_yearly.style.display = 'none'
-  }else if(!checkbox1.checked && !checkbox2.checked && checkbox3.checked){
-    online_service_price_yearly.style.display = 'none'
-    larger_storage_price_yearly.style.display = 'none'
-    custom_profile_price_yearly.style.display = 'flex'
-  }else if(!checkbox1.checked && checkbox2.checked && checkbox3.checked){
-    online_service_price_yearly.style.display = 'none'
-    larger_storage_price_yearly.style.display = 'flex'
-    custom_profile_price_yearly.style.display = 'flex'
-  }else if(!checkbox1.checked && checkbox2.checked && !checkbox3.checked){
-    online_service_price_yearly.style.display = 'none'
-    larger_storage_price_yearly.style.display = 'flex'
-    custom_profile_price_yearly.style.display = 'none'
-  }else if(checkbox1.checked && !checkbox2.checked && checkbox3.checked){
-    online_service_price_yearly.style.display = 'flex'
-    larger_storage_price_yearly.style.display = 'none'
-    custom_profile_price_yearly.style.display = 'flex'
-  }
-}
+// function yearlyAddOns(){
+//   ///should i call this function in the yearly e listener click and then call the monthly one when monthly is clicked and change based on the console log  
+//   // 
+//     online_service_price_monthly.style.display = 'none'
+//     larger_storage_price_monthly.style.display = 'none'
+//     custom_profile_price_monthly.style.display = 'none'
+//   // 
+
+//   if(checkbox1.checked && !checkbox2.checked && !checkbox3.checked){
+//     online_service_price_yearly.style.display = 'flex'
+//     larger_storage_price_yearly.style.display = 'none'
+//     custom_profile_price_yearly.style.display = 'none'
+//   }else if(checkbox1.checked && checkbox2.checked && !checkbox3.checked){
+//     online_service_price_yearly.style.display = 'flex'
+//     larger_storage_price_yearly.style.display = 'flex'
+//     custom_profile_price_yearly.style.display = 'none'
+//   }else if(checkbox1.checked && checkbox2.checked && checkbox3.checked){
+//     online_service_price_yearly.style.display = 'flex'
+//     larger_storage_price_yearly.style.display = 'flex'
+//     custom_profile_price_yearly.style.display = 'flex'
+//   }else if(!checkbox1.checked && !checkbox2.checked && !checkbox3.checked){
+//     online_service_price_yearly.style.display = 'none'
+//     larger_storage_price_yearly.style.display = 'none'
+//     custom_profile_price_yearly.style.display = 'none'
+//   }else if(!checkbox1.checked && !checkbox2.checked && checkbox3.checked){
+//     online_service_price_yearly.style.display = 'none'
+//     larger_storage_price_yearly.style.display = 'none'
+//     custom_profile_price_yearly.style.display = 'flex'
+//   }else if(!checkbox1.checked && checkbox2.checked && checkbox3.checked){
+//     online_service_price_yearly.style.display = 'none'
+//     larger_storage_price_yearly.style.display = 'flex'
+//     custom_profile_price_yearly.style.display = 'flex'
+//   }else if(!checkbox1.checked && checkbox2.checked && !checkbox3.checked){
+//     online_service_price_yearly.style.display = 'none'
+//     larger_storage_price_yearly.style.display = 'flex'
+//     custom_profile_price_yearly.style.display = 'none'
+//   }else if(checkbox1.checked && !checkbox2.checked && checkbox3.checked){
+//     online_service_price_yearly.style.display = 'flex'
+//     larger_storage_price_yearly.style.display = 'none'
+//     custom_profile_price_yearly.style.display = 'flex'
+//   }
+// }
 
 // 
 
-const add_on_yearly_input = document.querySelectorAll('.add-on-yearly-input')
+// const add_on_yearly_input = document.querySelectorAll('.add-on-yearly-input')
 
-add_on_yearly_input.forEach((year_add_on)=>year_add_on.addEventListener('click', yearlyAddOns))
+// const get_year_add_on = document.querySelectorAll('.get-year-add-on')
+
+// get_year_add_on.forEach((year_add_on)=>year_add_on.addEventListener('click', yearlyAddOns))
+
+// console.log(get_year_add_on)
 
 // 
 
@@ -396,7 +406,7 @@ arcade.addEventListener('click',()=>{
   advanced_main_yearly.style.display = 'none'
   pro_main_yearly.style.display = 'none'
   // 
- 
+
   // 
   if(arcade.classList.contains("plan-active-click")){
     console.log('the arcade has a border') ///need to addd the above code for display none to each of these if statements
@@ -462,6 +472,7 @@ advanced.addEventListener('click',()=>{
    advanced_main_yearly.style.display = 'none'
    pro_main_yearly.style.display = 'none'
    // 
+
   // 
   if(arcade.classList.contains("plan-active-click")){
     console.log('the arcade has a border')
@@ -601,6 +612,7 @@ const online_service = document.querySelector('.online-service')
 
 yearly_text.addEventListener('click',()=>{
   ball_inner.classList.add('ball-move')
+  
   for(let i = 0; i < yearlyPlanTextPrices.length; i++){
     plan_cost_text[i].textContent = yearlyPlanTextPrices[i]
   }  
@@ -655,6 +667,7 @@ yearly_text.addEventListener('click',()=>{
 
 monthly_text.addEventListener('click',()=>{
   ball_inner.classList.remove('ball-move')
+  
   for(let i = 0; i < monthlyPlanTextPrices.length; i++){
     plan_cost_text[i].textContent = monthlyPlanTextPrices[i]
   }
