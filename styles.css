@@ -584,6 +584,8 @@ input{
   border: 2px solid rgba(128, 0, 128, 0.466);
 }
 
+/*  */
+
 .online-service-price-yearly{
   display: none;
 }
@@ -595,3 +597,5 @@ input{
 .custom-profile-price-yearly{
   display: none;
 }
+
+/*  */

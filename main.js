@@ -304,7 +304,7 @@ const custom_profile_price_yearly = document.querySelector('.custom-profile-pric
 // 
 
 function yearlyAddOns(){
-  
+  ///should i call this function in the yearly e listener click and then call the monthly one when monthly is clicked and change based on the console log
   if(checkbox1.checked && !checkbox2.checked && !checkbox3.checked){
     online_service_price_yearly.style.display = 'flex'
     larger_storage_price_yearly.style.display = 'none'
@@ -340,6 +340,8 @@ function yearlyAddOns(){
   }
 }
 
+// 
+
 const add_on_yearly_input = document.querySelectorAll('.add-on-yearly-input')
 
 add_on_yearly_input.forEach((year_add_on)=>year_add_on.addEventListener('click', yearlyAddOns))
@@ -349,7 +351,6 @@ add_on_yearly_input.forEach((year_add_on)=>year_add_on.addEventListener('click',
 const addOns = document.querySelectorAll('.add-on')
 
 addOns.forEach((addOn)=>addOn.addEventListener('click', monthlyAddOns))
-
 
 const right_side_step_one = document.querySelector('.right-side-step-one')
 const form = document.querySelector('form')
