@@ -244,14 +244,13 @@
 
 
 
-
-
+///monthly addons
 const online_service_price_monthly = document.querySelector('.online-service-price-monthly')
 const larger_storage_price_monthly = document.querySelector('.larger-storage-price-monthly')
 const custom_profile_price_monthly = document.querySelector('.custom-profile-price-monthly')
 
 
-// call the function in the monthly and year events?
+// call the function in the monthly and year events? these checkboxes need to also be gotten for the yearly checkboxes. i was only getting the monthly checkboxes???????????????????????? im only getting the checkbox for the monnthly checkboxes. i need to get make an id for the yearly checkboxes and get those then put those into the function. and yes, i will need to put in each function display none to the other function. the exact same as before
 
 const checkbox1 = document.getElementById('checkbox1')
 const checkbox2 = document.getElementById('checkbox2')
@@ -259,9 +258,8 @@ const checkbox3 = document.getElementById('checkbox3')
 
 
 function monthlyAddOns(){
-  // need to remove the monthly and yearly addons for each time
+  // yes display none here for the other function addons and do the same for the yearly function. i forgot to get the id for the yearly checkboxes. i just coptied the checkbox1 but that isnt even the correct checbox for the yearly add on. unbelievable
   
-  // remove the yearly ones here
   if(checkbox1.checked && !checkbox2.checked && !checkbox3.checked){
     online_service_price_monthly.style.display = 'flex'
     larger_storage_price_monthly.style.display = 'none'
@@ -297,64 +295,6 @@ function monthlyAddOns(){
   }
 }
 
-// 
-// const online_service_price_yearly = document.querySelector('.online-service-price-yearly')
-// const larger_storage_price_yearly = document.querySelector('.larger-storage-price-yearly')
-// const custom_profile_price_yearly = document.querySelector('.custom-profile-price-yearly')
-// 
-
-// function yearlyAddOns(){
-//   ///should i call this function in the yearly e listener click and then call the monthly one when monthly is clicked and change based on the console log  
-//   // 
-//     online_service_price_monthly.style.display = 'none'
-//     larger_storage_price_monthly.style.display = 'none'
-//     custom_profile_price_monthly.style.display = 'none'
-//   // 
-
-//   if(checkbox1.checked && !checkbox2.checked && !checkbox3.checked){
-//     online_service_price_yearly.style.display = 'flex'
-//     larger_storage_price_yearly.style.display = 'none'
-//     custom_profile_price_yearly.style.display = 'none'
-//   }else if(checkbox1.checked && checkbox2.checked && !checkbox3.checked){
-//     online_service_price_yearly.style.display = 'flex'
-//     larger_storage_price_yearly.style.display = 'flex'
-//     custom_profile_price_yearly.style.display = 'none'
-//   }else if(checkbox1.checked && checkbox2.checked && checkbox3.checked){
-//     online_service_price_yearly.style.display = 'flex'
-//     larger_storage_price_yearly.style.display = 'flex'
-//     custom_profile_price_yearly.style.display = 'flex'
-//   }else if(!checkbox1.checked && !checkbox2.checked && !checkbox3.checked){
-//     online_service_price_yearly.style.display = 'none'
-//     larger_storage_price_yearly.style.display = 'none'
-//     custom_profile_price_yearly.style.display = 'none'
-//   }else if(!checkbox1.checked && !checkbox2.checked && checkbox3.checked){
-//     online_service_price_yearly.style.display = 'none'
-//     larger_storage_price_yearly.style.display = 'none'
-//     custom_profile_price_yearly.style.display = 'flex'
-//   }else if(!checkbox1.checked && checkbox2.checked && checkbox3.checked){
-//     online_service_price_yearly.style.display = 'none'
-//     larger_storage_price_yearly.style.display = 'flex'
-//     custom_profile_price_yearly.style.display = 'flex'
-//   }else if(!checkbox1.checked && checkbox2.checked && !checkbox3.checked){
-//     online_service_price_yearly.style.display = 'none'
-//     larger_storage_price_yearly.style.display = 'flex'
-//     custom_profile_price_yearly.style.display = 'none'
-//   }else if(checkbox1.checked && !checkbox2.checked && checkbox3.checked){
-//     online_service_price_yearly.style.display = 'flex'
-//     larger_storage_price_yearly.style.display = 'none'
-//     custom_profile_price_yearly.style.display = 'flex'
-//   }
-// }
-
-// 
-
-// const add_on_yearly_input = document.querySelectorAll('.add-on-yearly-input')
-
-// const get_year_add_on = document.querySelectorAll('.get-year-add-on')
-
-// get_year_add_on.forEach((year_add_on)=>year_add_on.addEventListener('click', yearlyAddOns))
-
-// console.log(get_year_add_on)
 
 // 
 
@@ -461,6 +401,7 @@ advanced.addEventListener('click',()=>{
   advanced.classList.add('plan-active-click')
   pro.classList.remove('plan-active-click')
   arcade.classList.remove('plan-active-click')
+
   hasBorder = true
   // 
   arcade_monthly.style.display = 'none'
@@ -525,6 +466,7 @@ pro.addEventListener('click',()=>{
   pro.classList.add('plan-active-click')
   advanced.classList.remove('plan-active-click')
   arcade.classList.remove('plan-active-click')
+  
   hasBorder = true
 
   // 
@@ -623,7 +565,6 @@ yearly_text.addEventListener('click',()=>{
   customizable_profile.style.display = 'none'
   larger_storage.style.display = 'none'
   online_service.style.display = 'none'
- 
   // need to add all the display none again here. code gets big and messy
   if(arcade.classList.contains("plan-active-click")){
     console.log('the arcade has a yearly border')
