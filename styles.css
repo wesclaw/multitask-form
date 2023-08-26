@@ -131,7 +131,7 @@ display: none;
 .left-side{
   width: 450px;
   height: 100%;
-  background-image: url(/images/bg-sidebar-desktop.svg);
+  background-image: url('bg-sidebar-desktop.svg');
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 20px;
