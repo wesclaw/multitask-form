@@ -2,9 +2,9 @@ const monthlyArcPrices = ['$9/mo', '$10/mo', '$12/mo', '$14/mo', '$13/mo', '$11/
 const monthlyAdvanPrices = ['$12/mo', '$13/mo', '$14/mo', '$16/mo', '$15/mo', '$17/mo']
 const monthlyProPrices = ['$15/mo', '$16/mo', '$17/mo', '$18/mo', '$19/mo', '$20/mo']
 
-const yearlyArcPrices = ['', '']
-const yearlyAdvanPrices = ['', '']
-const yearlyProPrices = ['', '']
+const yearlyArcPrices = ['$108/yr', '$118/yr', '$128/yr', '$138/yr', '$148/yr', '$158/yr']
+const yearlyAdvanPrices = ['$144/yr', '$154/yr', '$164/yr', '$184/yr', '$174/yr', '$194/yr']
+const yearlyProPrices = ['$180/yr', '$190/yr', '$200/yr', '$220/yr', '$210/yr', '$230/yr']
 
 ///monthly addons
 const online_service_price_monthly = document.querySelector('.online-service-price-monthly')
@@ -21,19 +21,25 @@ const yearCheckbox1 = document.getElementById('yearCheckbox1')
 const yearCheckbox2 = document.getElementById('yearCheckbox2')
 const yearCheckbox3 = document.getElementById('yearCheckbox3')
 
-// call the function in the monthly and year events? these checkboxes need to also be gotten for the yearly checkboxes. i was only getting the monthly checkboxes???????????????????????? im only getting the checkbox for the monnthly checkboxes. i need to get make an id for the yearly checkboxes and get those then put those into the function. and yes, i will need to put in each function display none to the other function. the exact same as before
-
 const checkbox1 = document.getElementById('checkbox1')
 const checkbox2 = document.getElementById('checkbox2')
 const checkbox3 = document.getElementById('checkbox3')
 
-function yearlyAddOns(){
-  // yes display none here for the other function addons and do the same for the yearly function. i forgot to get the id for the yearly checkboxes. i just coptied the checkbox1 but that isnt even the correct checbox for the yearly add on. unbelievable
+// get the two total price elements for the year and month. then place them into the function under each checkbox calculation. 
+// get the html total price month and year tags. check the functions because i called each function inside the plan names. each plan i called the function
+// 
+const final_price_monthly = document.querySelector('.final-price-monthly')
+const final_price_monthly_text = document.querySelector('.final-price-monthly-text')
 
+const final_price_yearly = document.querySelector('.final-price-yearly')
+const final_price_yearly_text = document.querySelector('.final-price-yearly-text')
+// 
+
+function yearlyAddOns(){
     online_service_price_monthly.style.display = 'none'
     larger_storage_price_monthly.style.display = 'none'
     custom_profile_price_monthly.style.display = 'none'
-  
+    
   if(yearCheckbox1.checked && !yearCheckbox2.checked && !yearCheckbox3.checked){
     online_service_price_yearly.style.display = 'flex'
     larger_storage_price_yearly.style.display = 'none'
@@ -75,39 +81,55 @@ function monthlyAddOns(){
     online_service_price_yearly.style.display = 'none'
     larger_storage_price_yearly.style.display = 'none'
     custom_profile_price_yearly.style.display = 'none'
-  
+
   if(checkbox1.checked && !checkbox2.checked && !checkbox3.checked){
     online_service_price_monthly.style.display = 'flex'
     larger_storage_price_monthly.style.display = 'none'
     custom_profile_price_monthly.style.display = 'none'
+
+    final_price_monthly_text.textContent = monthlyArcPrices[1]
   }else if(checkbox1.checked && checkbox2.checked && !checkbox3.checked){
     online_service_price_monthly.style.display = 'flex'
     larger_storage_price_monthly.style.display = 'flex'
     custom_profile_price_monthly.style.display = 'none'
+
+    final_price_monthly_text.textContent = monthlyArcPrices[2]
   }else if(checkbox1.checked && checkbox2.checked && checkbox3.checked){
     online_service_price_monthly.style.display = 'flex'
     larger_storage_price_monthly.style.display = 'flex'
     custom_profile_price_monthly.style.display = 'flex'
+
+    final_price_monthly_text.textContent = monthlyArcPrices[3]
   }else if(!checkbox1.checked && !checkbox2.checked && !checkbox3.checked){
     online_service_price_monthly.style.display = 'none'
     larger_storage_price_monthly.style.display = 'none'
     custom_profile_price_monthly.style.display = 'none'
+
+    final_price_monthly_text.textContent = monthlyArcPrices[0]
   }else if(!checkbox1.checked && !checkbox2.checked && checkbox3.checked){
     online_service_price_monthly.style.display = 'none'
     larger_storage_price_monthly.style.display = 'none'
     custom_profile_price_monthly.style.display = 'flex'
+
+    final_price_monthly_text.textContent = monthlyArcPrices[2]
   }else if(!checkbox1.checked && checkbox2.checked && checkbox3.checked){
     online_service_price_monthly.style.display = 'none'
     larger_storage_price_monthly.style.display = 'flex'
     custom_profile_price_monthly.style.display = 'flex'
+
+    final_price_monthly_text.textContent = monthlyArcPrices[1]
   }else if(!checkbox1.checked && checkbox2.checked && !checkbox3.checked){
     online_service_price_monthly.style.display = 'none'
     larger_storage_price_monthly.style.display = 'flex'
     custom_profile_price_monthly.style.display = 'none'
+
+    final_price_monthly_text.textContent = monthlyArcPrices[2]
   }else if(checkbox1.checked && !checkbox2.checked && checkbox3.checked){
     online_service_price_monthly.style.display = 'flex'
     larger_storage_price_monthly.style.display = 'none'
     custom_profile_price_monthly.style.display = 'flex'
+
+    final_price_monthly_text.textContent = monthlyArcPrices[5]
   }
 }
 // 
@@ -152,7 +174,8 @@ arcade.addEventListener('click',()=>{
   arcade.classList.add('plan-active-click')
   advanced.classList.remove('plan-active-click')
   pro.classList.remove('plan-active-click')
-  
+  monthlyAddOns()
+  yearlyAddOns()
   hasBorder = true
 
   arcade_monthly.style.display = 'flex'
@@ -220,7 +243,10 @@ advanced.addEventListener('click',()=>{
   advanced.classList.add('plan-active-click')
   pro.classList.remove('plan-active-click')
   arcade.classList.remove('plan-active-click')
-
+  // 
+  monthlyAddOns()
+  yearlyAddOns()
+  // 
   hasBorder = true
   // 
   arcade_monthly.style.display = 'none'
@@ -287,6 +313,11 @@ pro.addEventListener('click',()=>{
   arcade.classList.remove('plan-active-click')
 
   hasBorder = true
+
+  // 
+  monthlyAddOns()
+  yearlyAddOns()
+  // 
 
   // 
   arcade_monthly.style.display = 'none'
