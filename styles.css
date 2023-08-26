@@ -89,18 +89,6 @@ html{
   display: none;
 }
 
-/* .customizable-profile{
-  display: none;
-}
-
-.larger-storage{
-display: none;
-}
-
-.online-service{
-display: none;
-} */
-
 .right-side-step-three{
 display: none;
 }
@@ -362,6 +350,7 @@ input{
   width: 20px;
   position: relative;
   top: 12px;
+  accent-color: rgb(64, 95, 235);
 }
 
 .wrapper-for-add-on{
@@ -598,14 +587,3 @@ input{
   display: none;
 }
 
-/* why is above display none? */
-/* add on for the monthly checkboxes */ 
-/* .add-on{
-  display: none;
-}
-
-.get-year-add-on{
-  display: none;
-} */
-
-/*  */
