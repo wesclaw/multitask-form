@@ -784,6 +784,7 @@ last_go_back_btn.addEventListener('click',()=>{
 })
 
 const confirm_btn = document.querySelector('.confirm-btn').addEventListener('click',()=>{
+  const confetti = document.querySelectorAll('.confetti')
   const finish_up = document.querySelector('.last-section-finish-up')
   finish_up.innerHTML = `<img src="icon-thank-you.svg">
   <h1>Thank you!</h1>
@@ -791,5 +792,8 @@ const confirm_btn = document.querySelector('.confirm-btn').addEventListener('cli
   </div>`
   finish_up.classList.add('thank-you-section')
   step_num_four.classList.add('white-num-bg')
+  confetti.forEach((confet)=>{
+    confet.style.display = 'block'
+  })
 })
 
