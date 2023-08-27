@@ -453,7 +453,7 @@ input{
 
 .final-price-monthly-text{
   font-size: 1.3rem;
-  color: rgb(125, 43, 158);
+  color: rgb(58, 55, 224);
   font-weight: 800;
 }
 
@@ -483,10 +483,11 @@ input{
 
 .right-side-thank-you{
   width: 100%;
+  height: 100%;
 }
 
 .thank-you-section{
-  height: 100%;
+  height: 80%;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -526,6 +527,8 @@ input{
 
 .final-price-yearly{
   display: none;
+  background-color: ghostwhite;
+  border-bottom: none;
 }
 
 .final-price-monthly{
@@ -585,5 +588,10 @@ input{
 
 .custom-profile-price-yearly{
   display: none;
+}
+
+.white-num-bg{
+  background-color: ghostwhite;
+  color: black;
 }
 
