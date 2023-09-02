@@ -263,6 +263,8 @@ change_btn.forEach((changeBtn)=>{
   changeBtn.addEventListener('click',()=>{
     right_side_step_two.style.display = 'block'
     right_side_step_four.style.display = 'none'
+    step_num_two.classList.remove('white-num-bg')
+    step_num_three.classList.remove('white-num-bg')
   })
 })
 //////////////////////////////
